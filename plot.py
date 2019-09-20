@@ -4,8 +4,11 @@ import os
 import sys
 
 
-f= open("threshold.dat","r")
+file_name = "threshold_B_down.dat"
+f = open(file_name,"r")
 
+write_file_name = file_name[:-4]+"_short.dat"
+write_file = open(write_file_name, "w+")
 
 data = np.fromfile(f,dtype=np.float32)
 
@@ -13,6 +16,8 @@ data = np.fromfile(f,dtype=np.float32)
 #plt.plot(data)
 #plt.ylim((-0.2,1.2))
 #plt.show()
+
+start = np.where(data>0.5)[0][0] - 10000
 
 fig = plt.figure()
 ax0 = fig.add_axes([0.1, 0.1, 0.8, 0.2], xticklabels=[], ylim=(-.2, 1.2))
@@ -23,9 +28,9 @@ ax3 = fig.add_axes([0.1, 0.7, 0.8, 0.2], ylim=(-.2, 1.2))
 # 2321800
 # 472700
 
-diff = 2321800
-tonext = 472700
-start = 28435200
+diff = 245000#2321800
+tonext = 595000#472700
+#start = 28435200
 stop = start + diff
 
 ax0.plot(data[start:stop]) 
@@ -38,6 +43,8 @@ ax1.plot(data[start:stop])
 start = stop + tonext
 stop = start + diff
 
+write_file.write(data[start:stop])
+
 ax2.plot(data[start:stop])
 
 start = stop + tonext
@@ -49,4 +56,4 @@ plt.show()
 
 
 f.close()
-
+write_file.close()
