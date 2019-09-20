@@ -4,7 +4,7 @@ import os
 import sys
 
 
-file_name = "threshold_B_down.dat"
+file_name = "data/threshold_B_down.dat"
 f = open(file_name,"r")
 
 write_file_name = file_name[:-4]+"_short.dat"
