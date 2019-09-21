@@ -31,6 +31,5 @@ except ImportError:
 	pass
 
 # import any pure python here
-from triggering import triggering
 from trigger_ff import trigger_ff
 #

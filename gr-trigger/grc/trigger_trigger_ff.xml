@@ -4,7 +4,7 @@
   <key>trigger_trigger_ff</key>
   <category>trigger</category>
   <import>import trigger</import>
-  <make>trigger.trigger_ff($threshold, $length, $triggered)</make>
+  <make>trigger.trigger_ff($threshold, $length)</make>
   <!-- Make one 'param' node for every Parameter you want settable from the GUI.
        Sub-nodes:
        * name

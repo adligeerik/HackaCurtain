@@ -28,15 +28,15 @@ class trigger_ff(gr.sync_block):
     """
     docstring for block trigger_ff
     """
-    def __init__(self, threshold, length, triggered):
+    def __init__(self, threshold, length):
         self.threshold = threshold
-        self.triggered = triggered
+        self.triggered = 0
         self.length = length
         self.index = 0
         gr.sync_block.__init__(self,
             name="trigger_ff",
-            in_sig=[numpy.float],
-            out_sig=[numpy.float])
+            in_sig=[numpy.float32],
+            out_sig=[numpy.float32])
 
 
     def work(self, input_items, output_items):
@@ -54,6 +54,7 @@ class trigger_ff(gr.sync_block):
             self.triggered = 0
             self.index = 0
 
-        out[:] = self.triggered
+        # out[:] = self.triggered
+        out[:] = in0
         return len(output_items[0])
 
