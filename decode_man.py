@@ -3,7 +3,6 @@ import matplotlib.pyplot as plt
 import os
 import sys
 
-
 #settings
 window = 0
 file_name = sys.argv[1]
@@ -12,6 +11,25 @@ if len(sys.argv) > 2:
     verbose = sys.argv[2]
 else:
     verbose = 0
+
+def deObfusicate(frame):
+    for i in range(len(frame)-1, 0, -1):
+        frame[i] = frame[i] ^ frame[i-1]
+    return frame
+
+def checCksum(input_msg):
+    print("cksum frame: " + str(bin(frame[1])))
+    cksum = frame[0] ^ (frame[0] >> 4)
+
+    for i in range(1,7):
+        print("Frame: " + bin(frame[i]))
+        print("nibble 1: " + bin(frame[i] & 0x0f), "nibble 2: " + bin(frame[i]>>4))
+        cksum = cksum ^ (frame[i]>>4)
+        cksum = cksum ^ frame[i]
+       
+    cksum = cksum & 0x0f 
+    print("Checksum: "  + bin(cksum))
+    return cksum
 
 
 f = open(file_name,"r")
@@ -69,6 +87,21 @@ while True:
         break
 
 ans = "".join([ str (int(x)) for x in decoded_data ])
+frame = ' '.join(ans[i:i+8] for i in range(0,len(ans),8)).split(' ')
+print(frame)
+frame = [int(d, 2) for d in frame]
+print("input_msg converted:", ' '.join([bin(lst)[2:] for lst in frame]))
+
+frame = deObfusicate(frame)
+cksum = checCksum(frame)
+if cksum == 0:
+    print("Checksum correct!")
+else:
+    print("Incorrect checksum")
+
+
+
+ans = "".join([ bin(x)[2:] for x in frame ])
 #ans = ' '.join(ans[i:i+4] for i in range(0,len(ans),4))
 print(file_name + "\t" + ans)
 
