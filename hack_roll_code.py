@@ -5,6 +5,13 @@ import sys
 import argparse
 from encoding import encode
 import top_block
+import threading
+from time import sleep
+
+
+def start_grc(tb):
+    tb.start()
+    tb.wait()
 
 #Takes a list and converts it to 
 def msg_builder(args):
@@ -41,8 +48,16 @@ if args['roll_step'] == None:
 
 #Radio magic
 tb = top_block.top_block()
-tb.start()
-tb.wait()
+grc_th = threading.Thread(target=start_grc, args=(tb,))
+grc_th.start()
+
+#bin_msg = encode([" ", "-h", "A0200403B2A85C"])
+#tb.set_msg(bin_msg)
+#
+#
+#bin_msg = encode([" ", "-h", "A0200400B2A85C"])
+#tb.set_msg(bin_msg)
+
 
 if addr == None:
     #Find address
@@ -50,15 +65,17 @@ if addr == None:
 else:
     hex_msg = msg_builder(args)
     send_msg = encode([" ", "-h", hex_msg])
-    #send to rf
+    tb.set_msg(send_msg)
+    sleep(1)
     print(hex_msg)
     x = 0
     while True:
-        if x > 6:
+        if x > 65535:
             break
         args['roll_code'] = next_rcode(args['roll_code'], args['roll_step'])
         hex_msg = msg_builder(args) 
         print(hex_msg)
         send_msg = encode([" ", "-h", hex_msg])
-        #send to rf
-        x += 1
+        tb.set_msg(send_msg)
+        sleep(1)
+        x = int(args['roll_code'],16)

@@ -60,5 +60,5 @@ def encode(argv):
     msg = preamble + out_msg 
     print(msg)
 
-    msg = "".join([x*1000 for x in msg])
+    #msg = "".join([x*1000 for x in msg])
     return msg
