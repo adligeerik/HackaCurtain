@@ -198,11 +198,11 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>file</key>
-      <value>/home/erik/Dev/LoligoDev/lamp_remote_recoder/threshold_lamp_c_off.dat</value>
+      <value>/home/erik/Dev/mini-hackathon/HackaCurtain/data/A_tests_up/4.dat</value>
     </param>
     <param>
       <key>_coordinate</key>

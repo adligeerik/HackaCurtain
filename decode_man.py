@@ -5,9 +5,9 @@ import sys
 
 
 #settings
-pulse_width = 95000
+pulse_width = 9000
 window = 0
-file_name = "data/threshold_short.dat"
+file_name = "data/threshold_B_down_short.dat"
 
 
 f = open(file_name,"r")
