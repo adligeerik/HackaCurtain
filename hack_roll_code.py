@@ -9,6 +9,7 @@ import threading
 from time import sleep
 
 
+#Function for GRC in other thread
 def start_grc(tb):
     tb.start()
     tb.wait()
@@ -50,13 +51,6 @@ if args['roll_step'] == None:
 tb = top_block_transmit.top_block()
 grc_th = threading.Thread(target=start_grc, args=(tb,))
 grc_th.start()
-
-#bin_msg = encode([" ", "-h", "A0200403B2A85C"])
-#tb.set_msg(bin_msg)
-#
-#
-#bin_msg = encode([" ", "-h", "A0200400B2A85C"])
-#tb.set_msg(bin_msg)
 
 
 if addr == None:
