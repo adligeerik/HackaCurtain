@@ -283,7 +283,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(816, 281)</value>
+      <value>(920, 185)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -315,7 +315,7 @@
     </param>
     <param>
       <key>output_index</key>
-      <value>0</value>
+      <value>trigger</value>
     </param>
     <param>
       <key>type</key>
@@ -324,65 +324,6 @@
     <param>
       <key>vlen</key>
       <value>1</value>
-    </param>
-  </block>
-  <block>
-    <key>blocks_burst_tagger</key>
-    <param>
-      <key>alias</key>
-      <value></value>
-    </param>
-    <param>
-      <key>comment</key>
-      <value></value>
-    </param>
-    <param>
-      <key>affinity</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>false_key</key>
-      <value>burst</value>
-    </param>
-    <param>
-      <key>false_value</key>
-      <value>False</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(1120, 183)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>id</key>
-      <value>blocks_burst_tagger_0</value>
-    </param>
-    <param>
-      <key>maxoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>minoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>type</key>
-      <value>float</value>
-    </param>
-    <param>
-      <key>true_key</key>
-      <value>burst</value>
-    </param>
-    <param>
-      <key>true_value</key>
-      <value>True</value>
     </param>
   </block>
   <block>
@@ -456,7 +397,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(320, 46)</value>
+      <value>(1104, 166)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -473,53 +414,6 @@
     <param>
       <key>unbuffered</key>
       <value>False</value>
-    </param>
-    <param>
-      <key>vlen</key>
-      <value>1</value>
-    </param>
-  </block>
-  <block>
-    <key>blocks_float_to_short</key>
-    <param>
-      <key>alias</key>
-      <value></value>
-    </param>
-    <param>
-      <key>comment</key>
-      <value></value>
-    </param>
-    <param>
-      <key>affinity</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(976, 276)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>id</key>
-      <value>blocks_float_to_short_0</value>
-    </param>
-    <param>
-      <key>maxoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>minoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>scale</key>
-      <value>1</value>
     </param>
     <param>
       <key>vlen</key>
@@ -550,7 +444,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1016, 345)</value>
+      <value>(1128, 313)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -567,49 +461,6 @@
     <param>
       <key>num_inputs</key>
       <value>1</value>
-    </param>
-    <param>
-      <key>vlen</key>
-      <value>1</value>
-    </param>
-  </block>
-  <block>
-    <key>blocks_tagged_file_sink</key>
-    <param>
-      <key>alias</key>
-      <value></value>
-    </param>
-    <param>
-      <key>comment</key>
-      <value></value>
-    </param>
-    <param>
-      <key>affinity</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(1152, 421)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>id</key>
-      <value>blocks_tagged_file_sink_0</value>
-    </param>
-    <param>
-      <key>type</key>
-      <value>float</value>
-    </param>
-    <param>
-      <key>samp_rate</key>
-      <value>int(samp_rate)</value>
     </param>
     <param>
       <key>vlen</key>
@@ -2121,11 +1972,11 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(648, 445)</value>
+      <value>(888, 349)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -2133,7 +1984,7 @@
     </param>
     <param>
       <key>id</key>
-      <value>trigger_trigger_ff_0</value>
+      <value>trigger</value>
     </param>
     <param>
       <key>length</key>
@@ -2149,6 +2000,10 @@
     </param>
     <param>
       <key>threshold</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>triggered</key>
       <value>1</value>
     </param>
   </block>
@@ -2344,7 +2199,7 @@
   </block>
   <connection>
     <source_block_id>blks2_selector_0</source_block_id>
-    <sink_block_id>blocks_float_to_short_0</sink_block_id>
+    <sink_block_id>blocks_file_sink_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
@@ -2355,22 +2210,10 @@
     <sink_key>0</sink_key>
   </connection>
   <connection>
-    <source_block_id>blocks_burst_tagger_0</source_block_id>
-    <sink_block_id>blocks_tagged_file_sink_0</sink_block_id>
-    <source_key>0</source_key>
-    <sink_key>0</sink_key>
-  </connection>
-  <connection>
     <source_block_id>blocks_complex_to_mag_0</source_block_id>
     <sink_block_id>blocks_threshold_ff_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
-  </connection>
-  <connection>
-    <source_block_id>blocks_float_to_short_0</source_block_id>
-    <sink_block_id>blocks_burst_tagger_0</sink_block_id>
-    <source_key>0</source_key>
-    <sink_key>1</sink_key>
   </connection>
   <connection>
     <source_block_id>blocks_threshold_ff_0</source_block_id>
@@ -2380,13 +2223,7 @@
   </connection>
   <connection>
     <source_block_id>blocks_threshold_ff_0</source_block_id>
-    <sink_block_id>blocks_burst_tagger_0</sink_block_id>
-    <source_key>0</source_key>
-    <sink_key>0</sink_key>
-  </connection>
-  <connection>
-    <source_block_id>blocks_threshold_ff_0</source_block_id>
-    <sink_block_id>trigger_trigger_ff_0</sink_block_id>
+    <sink_block_id>trigger</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
@@ -2405,12 +2242,6 @@
   <connection>
     <source_block_id>osmosdr_source_0</source_block_id>
     <sink_block_id>wxgui_fftsink2_0</sink_block_id>
-    <source_key>0</source_key>
-    <sink_key>0</sink_key>
-  </connection>
-  <connection>
-    <source_block_id>trigger_trigger_ff_0</source_block_id>
-    <sink_block_id>blocks_float_to_short_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>

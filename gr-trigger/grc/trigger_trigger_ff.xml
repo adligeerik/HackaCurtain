@@ -4,12 +4,24 @@
   <key>trigger_trigger_ff</key>
   <category>trigger</category>
   <import>import trigger</import>
-  <make>trigger.trigger_ff($threshold, $length, $triggered)</make>
+  <var_make>self.$(id) = $(id) = $triggered</var_make>
+  <make>trigger.trigger_ff($key ,$threshold, $length, $triggered)
+  self._$(id)_ff = trigger.trigger_ff($key ,$threshold, $length, $triggered)
+	triggered=self.$id,
+	callback=self.set_$(id),
+)
+</make>
+  <callback>self.get_val($id)</callback>
+  
+  
   <!-- Make one 'param' node for every Parameter you want settable from the GUI.
        Sub-nodes:
        * name
        * key (makes the value accessible as $keyname, e.g. in the make node)
        * type -->
+
+
+
 
   <param>
     <name>Threshold</name>
@@ -21,6 +33,12 @@
     <name>Length</name>
     <key>length</key>
     <type>float</type>
+  </param>
+
+    <param>
+    <name>Triggered</name>
+    <key>triggered</key>
+    <type>int</type>
   </param>
 
   <!-- Make one 'sink' node per input. Sub-nodes:
