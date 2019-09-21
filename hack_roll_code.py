@@ -4,7 +4,7 @@ import os
 import sys
 import argparse
 from encoding import encode
-import top_block
+import top_block_transmit
 import threading
 from time import sleep
 
@@ -47,7 +47,7 @@ if args['roll_step'] == None:
     args['roll_step'] = 1
 
 #Radio magic
-tb = top_block.top_block()
+tb = top_block_transmit.top_block()
 grc_th = threading.Thread(target=start_grc, args=(tb,))
 grc_th.start()
 

@@ -35,7 +35,7 @@ def encode(argv):
     frame = addCksum(input_msg)
     frame = obfusicate(frame)
     input_msg = "".join([ format(x, '#010b')[2:] for x in frame ])
-    print(input_msg)
+    #print(input_msg)
 
     def inv(a):
         if a == 1:
@@ -58,7 +58,7 @@ def encode(argv):
 
     out_msg = out_msg[0] + out_msg + "00"
     msg = preamble + out_msg 
-    print(msg)
+    #print(msg)
 
     #msg = "".join([x*1000 for x in msg])
     return msg
