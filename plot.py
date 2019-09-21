@@ -53,7 +53,8 @@ stop = start + diff
 
 ax3.plot(data[start:stop])
 
-plt.show()
+if len(sys.argv) > 2:
+    plt.show()
 
 
 f.close()

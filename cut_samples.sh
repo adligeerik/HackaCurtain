@@ -1,5 +1,5 @@
-python2 plot.py data/A_tests_up/1.dat
-python2 plot.py data/A_tests_up/2.dat
-python2 plot.py data/A_tests_up/3.dat
-python2 plot.py data/A_tests_up/4.dat
 
+FILES="data/A_tests_down_1/"
+for file in $FILES*; do
+    python2 plot.py $file 1
+done

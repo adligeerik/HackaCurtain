@@ -1,5 +1,5 @@
-python2 decode_man.py data/A_tests_up/1_short.dat
-python2 decode_man.py data/A_tests_up/2_short.dat
-python2 decode_man.py data/A_tests_up/3_short.dat
-python2 decode_man.py data/A_tests_up/4_short.dat
 
+FILES="data/A_tests_down_1/"
+for file in $FILES*_short.dat; do
+    python2 decode_man.py $file
+done

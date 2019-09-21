@@ -3,7 +3,7 @@
 ##################################################
 # GNU Radio Python Flow Graph
 # Title: Top Block
-# Generated: Sat Sep 21 03:56:31 2019
+# Generated: Sat Sep 21 12:26:35 2019
 ##################################################
 
 if __name__ == '__main__':
@@ -16,9 +16,9 @@ if __name__ == '__main__':
         except:
             print "Warning: failed to XInitThreads()"
 
+from datetime import datetime
 from gnuradio import blocks
 from gnuradio import eng_notation
-from gnuradio import filter
 from gnuradio import gr
 from gnuradio import wxgui
 from gnuradio.eng_option import eng_option
@@ -41,14 +41,28 @@ class top_block(grc_wxgui.top_block_gui):
         ##################################################
         # Variables
         ##################################################
-        self.spacing = spacing = 10
         self.samp_rate = samp_rate = 2e6
-        self.msg = msg = "000011110000111100001111000011110000111100001111000011110000111111110011001100101010101101010010110100110100110101001100101011001101001010110010110100110010110100110010101100101011000"
+        self.folder = folder = "/home/erik/Dev/mini-hackathon/HackaCurtain/data/A_tests_down_1/"
+        self.center_freq = center_freq = 433.5e6
 
         ##################################################
         # Blocks
         ##################################################
-        self.wxgui_scopesink2_0 = scopesink2.scope_sink_c(
+        self.wxgui_scopesink2_1 = scopesink2.scope_sink_f(
+        	self.GetWin(),
+        	title="Scope Plot",
+        	sample_rate=samp_rate,
+        	v_scale=0,
+        	v_offset=0,
+        	t_scale=0,
+        	ac_couple=False,
+        	xy_mode=False,
+        	num_inputs=1,
+        	trig_mode=wxgui.TRIG_MODE_AUTO,
+        	y_axis_label="Counts",
+        )
+        self.Add(self.wxgui_scopesink2_1.win)
+        self.wxgui_scopesink2_0 = scopesink2.scope_sink_f(
         	self.GetWin(),
         	title="Scope Plot",
         	sample_rate=samp_rate,
@@ -62,60 +76,55 @@ class top_block(grc_wxgui.top_block_gui):
         	y_axis_label="Counts",
         )
         self.Add(self.wxgui_scopesink2_0.win)
-        self.rational_resampler_xxx_0 = filter.rational_resampler_fff(
-                interpolation=int(540*2.3),
-                decimation=1,
-                taps=(1, ),
-                fractional_bw=4,
-        )
-        self.osmosdr_sink_0 = osmosdr.sink( args="numchan=" + str(1) + " " + "" )
-        self.osmosdr_sink_0.set_sample_rate(samp_rate)
-        self.osmosdr_sink_0.set_center_freq(433.42e6, 0)
-        self.osmosdr_sink_0.set_freq_corr(0, 0)
-        self.osmosdr_sink_0.set_gain(10, 0)
-        self.osmosdr_sink_0.set_if_gain(20, 0)
-        self.osmosdr_sink_0.set_bb_gain(20, 0)
-        self.osmosdr_sink_0.set_antenna("", 0)
-        self.osmosdr_sink_0.set_bandwidth(0, 0)
+        self.osmosdr_source_0 = osmosdr.source( args="numchan=" + str(1) + " " + "" )
+        self.osmosdr_source_0.set_sample_rate(samp_rate)
+        self.osmosdr_source_0.set_center_freq(center_freq, 0)
+        self.osmosdr_source_0.set_freq_corr(0, 0)
+        self.osmosdr_source_0.set_dc_offset_mode(0, 0)
+        self.osmosdr_source_0.set_iq_balance_mode(0, 0)
+        self.osmosdr_source_0.set_gain_mode(False, 0)
+        self.osmosdr_source_0.set_gain(20, 0)
+        self.osmosdr_source_0.set_if_gain(30, 0)
+        self.osmosdr_source_0.set_bb_gain(30, 0)
+        self.osmosdr_source_0.set_antenna("", 0)
+        self.osmosdr_source_0.set_bandwidth(0, 0)
           
-        self.blocks_vector_source_x_0 = blocks.vector_source_i([ int (x) for x in msg ] + [ 0] * spacing, True, 1, [])
-        self.blocks_multiply_const_vxx_0 = blocks.multiply_const_vff((1, ))
-        self.blocks_moving_average_xx_0 = blocks.moving_average_ff(int(540*2.3), 1, 4000)
-        self.blocks_int_to_float_1 = blocks.int_to_float(1, 1)
-        self.blocks_float_to_complex_0 = blocks.float_to_complex(1)
+        self.blocks_threshold_ff_0 = blocks.threshold_ff(0.08, 0.14, 0)
+        self.blocks_file_sink_0 = blocks.file_sink(gr.sizeof_float*1, folder+datetime.now().strftime("%Y.%m.%d.%H.%M.%S")+".dat", False)
+        self.blocks_file_sink_0.set_unbuffered(False)
+        self.blocks_complex_to_mag_0 = blocks.complex_to_mag(1)
 
         ##################################################
         # Connections
         ##################################################
-        self.connect((self.blocks_float_to_complex_0, 0), (self.osmosdr_sink_0, 0))    
-        self.connect((self.blocks_float_to_complex_0, 0), (self.wxgui_scopesink2_0, 0))    
-        self.connect((self.blocks_int_to_float_1, 0), (self.rational_resampler_xxx_0, 0))    
-        self.connect((self.blocks_moving_average_xx_0, 0), (self.blocks_multiply_const_vxx_0, 0))    
-        self.connect((self.blocks_multiply_const_vxx_0, 0), (self.blocks_float_to_complex_0, 0))    
-        self.connect((self.blocks_vector_source_x_0, 0), (self.blocks_int_to_float_1, 0))    
-        self.connect((self.rational_resampler_xxx_0, 0), (self.blocks_moving_average_xx_0, 0))    
-
-    def get_spacing(self):
-        return self.spacing
-
-    def set_spacing(self, spacing):
-        self.spacing = spacing
-        self.blocks_vector_source_x_0.set_data([ int (x) for x in self.msg ] + [ 0] * self.spacing, [])
+        self.connect((self.blocks_complex_to_mag_0, 0), (self.blocks_threshold_ff_0, 0))    
+        self.connect((self.blocks_complex_to_mag_0, 0), (self.wxgui_scopesink2_0, 0))    
+        self.connect((self.blocks_threshold_ff_0, 0), (self.blocks_file_sink_0, 0))    
+        self.connect((self.blocks_threshold_ff_0, 0), (self.wxgui_scopesink2_1, 0))    
+        self.connect((self.osmosdr_source_0, 0), (self.blocks_complex_to_mag_0, 0))    
 
     def get_samp_rate(self):
         return self.samp_rate
 
     def set_samp_rate(self, samp_rate):
         self.samp_rate = samp_rate
-        self.osmosdr_sink_0.set_sample_rate(self.samp_rate)
+        self.osmosdr_source_0.set_sample_rate(self.samp_rate)
         self.wxgui_scopesink2_0.set_sample_rate(self.samp_rate)
+        self.wxgui_scopesink2_1.set_sample_rate(self.samp_rate)
 
-    def get_msg(self):
-        return self.msg
+    def get_folder(self):
+        return self.folder
 
-    def set_msg(self, msg):
-        self.msg = msg
-        self.blocks_vector_source_x_0.set_data([ int (x) for x in self.msg ] + [ 0] * self.spacing, [])
+    def set_folder(self, folder):
+        self.folder = folder
+        self.blocks_file_sink_0.open(self.folder+datetime.now().strftime("%Y.%m.%d.%H.%M.%S")+".dat")
+
+    def get_center_freq(self):
+        return self.center_freq
+
+    def set_center_freq(self, center_freq):
+        self.center_freq = center_freq
+        self.osmosdr_source_0.set_center_freq(self.center_freq, 0)
 
 
 def main(top_block_cls=top_block, options=None):

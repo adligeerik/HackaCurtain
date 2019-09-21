@@ -120,6 +120,33 @@
     </param>
     <param>
       <key>_coordinate</key>
+      <value>(120, 384)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>folder</value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>"/home/erik/Dev/mini-hackathon/HackaCurtain/data/A_tests_down_1/"</value>
+    </param>
+  </block>
+  <block>
+    <key>variable</key>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
       <value>(80, 149)</value>
     </param>
     <param>
@@ -198,11 +225,11 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>file</key>
-      <value>/home/erik/Dev/mini-hackathon/HackaCurtain/data/A_tests_up/2.dat</value>
+      <value>folder+datetime.now().strftime("%Y.%m.%d.%H.%M.%S")+".dat"</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -325,6 +352,37 @@
     <param>
       <key>samp_rate</key>
       <value>2000000</value>
+    </param>
+  </block>
+  <block>
+    <key>import</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(208, 20)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>import_0</value>
+    </param>
+    <param>
+      <key>import</key>
+      <value>from datetime import datetime</value>
     </param>
   </block>
   <block>
