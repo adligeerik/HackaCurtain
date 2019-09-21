@@ -4,6 +4,15 @@ import os
 import sys
 
 
+def calcCks(input_msg):
+    x = np.array(list(input_msg))
+    x = x.astype(np.float)
+    x[12:16] = [0, 0, 0, 0]
+    chksm = np.zeros(4)
+    for i in range(8):
+        
+
+
 
 input_msg = "10101011100011001000111101010110110011101001000011001100"
 
