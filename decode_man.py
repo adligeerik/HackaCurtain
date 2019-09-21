@@ -89,11 +89,12 @@ frame = deObfusicate(frame)
 cksum = checCksum(frame)
 
 print(file_name)
-print "Frame: "+''.join('0x{:02X} '.format(x) for x in frame)
-print "    Control: 0x{:02X}".format((frame[1] >> 4) & 0x0f)
-print "    Checksum: {}".format("ok" if cksum==0 else "error")
-print "    Address: "+''.join('{:02X} '.format(x) for x in frame[4:7])
-print "    Rolling Code: "+''.join('{:02X} '.format(x) for x in frame[2:4])
+print("Frame: "+''.join('0x{:02X} '.format(x) for x in frame))
+print("    Key: 0x{:02X}".format((frame[0])))
+print("    Control: 0x{:02X}".format((frame[1] >> 4) & 0x0f))
+print("    Checksum: {}".format("ok" if cksum==0 else "error"))
+print("    Address: "+''.join('{:02X} '.format(x) for x in frame[4:7]))
+print("    Rolling Code: "+''.join('{:02X} '.format(x) for x in frame[2:4]))
 print('')
             
     
