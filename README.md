@@ -25,15 +25,19 @@ ldconfig
 ```
 
 **scope.grc**
+
 Records on 433.42Mhz processes it with a threshold for high and low. Then saves it 
 
 **decode_man.py**
-Takes the recorded file and decodes the Manchestercoding
+
+Takes the recorded file and decodes the Manchestercoding, then de-obfuscation and check the checksum
 
 **manchester_encoding.py**
-Encodes a message with Manchester and adds the preamble 
+
+Obfuscation the message calculates the checksum and encodes the message with Manchester and adds the preamble 
 
 **synt_v2.grc**
+
 Sends a message on 433.42Mhz
 
 
