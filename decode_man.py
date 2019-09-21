@@ -7,14 +7,14 @@ import sys
 #settings
 pulse_width = 95000
 window = 0
-file_name = "threshold_short.dat"
+file_name = "data/threshold_short.dat"
 
 
 f = open(file_name,"r")
 data = np.fromfile(f,dtype=np.float32)
 old_value = data[0]
-decoded_data = np.zeros(64)
-decoded_index = np.zeros(64)
+decoded_data = np.zeros(56)
+decoded_index = np.zeros(56)
 pulse_high_counter = 0
 pulse_low_counter = 0
 dd_counter = 0
@@ -59,13 +59,17 @@ while True:
         break
     #print(i)
 
+ans = "".join([ str (int(x)) for x in decoded_data ])
+
+print("Decoded data: " + ans)
+
 fig = plt.figure()
 ax0 = fig.add_axes([0.1, 0.1, 0.8, 0.2], xticklabels=[], ylim=(-.2, 1.2))
-ax0.plot(data[80000:])
-ax0.plot(decoded_index, np.ones(64), '*')
-plt.savefig('foo.png')
+ax0.plot(data)
+ax0.plot(decoded_index, np.ones(56), '*')
+plt.show()
 
-print("Decoded data: " + str(decoded_data))
+
             
     
     
