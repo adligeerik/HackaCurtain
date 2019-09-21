@@ -18,17 +18,12 @@ def deObfusicate(frame):
     return frame
 
 def checCksum(input_msg):
-    print("cksum frame: " + str(bin(frame[1])))
     cksum = frame[0] ^ (frame[0] >> 4)
-
     for i in range(1,7):
-        print("Frame: " + bin(frame[i]))
-        print("nibble 1: " + bin(frame[i] & 0x0f), "nibble 2: " + bin(frame[i]>>4))
         cksum = cksum ^ (frame[i]>>4)
         cksum = cksum ^ frame[i]
        
     cksum = cksum & 0x0f 
-    print("Checksum: "  + bin(cksum))
     return cksum
 
 
@@ -88,30 +83,18 @@ while True:
 
 ans = "".join([ str (int(x)) for x in decoded_data ])
 frame = ' '.join(ans[i:i+8] for i in range(0,len(ans),8)).split(' ')
-print(frame)
 frame = [int(d, 2) for d in frame]
-print("input_msg converted:", ' '.join([bin(lst)[2:] for lst in frame]))
 
 frame = deObfusicate(frame)
 cksum = checCksum(frame)
-if cksum == 0:
-    print("Checksum correct!")
-else:
-    print("Incorrect checksum")
 
-
-
-ans = "".join([ bin(x)[2:] for x in frame ])
-#ans = ' '.join(ans[i:i+4] for i in range(0,len(ans),4))
-print(file_name + "\t" + ans)
-
-# fig = plt.figure()
-# ax0 = fig.add_axes([0.1, 0.1, 0.8, 0.2], xticklabels=[], ylim=(-.2, 1.2))
-# ax0.plot(data)
-# ax0.plot(decoded_index, np.ones(56), '*')
-# plt.show()
-
-
+print(file_name)
+print "Frame: "+''.join('0x{:02X} '.format(x) for x in frame)
+print "    Control: 0x{:02X}".format((frame[1] >> 4) & 0x0f)
+print "    Checksum: {}".format("ok" if cksum==0 else "error")
+print "    Address: "+''.join('{:02X} '.format(x) for x in frame[4:7])
+print "    Rolling Code: "+''.join('{:02X} '.format(x) for x in frame[2:4])
+print('')
             
     
     
