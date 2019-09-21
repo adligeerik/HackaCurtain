@@ -18,6 +18,5 @@
 # Boston, MA 02110-1301, USA.
 
 install(FILES
-    trigger_triggering.xml
     trigger_trigger_ff.xml DESTINATION share/gnuradio/grc/blocks
 )

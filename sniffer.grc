@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<?grc format='1' created='3.7.9'?>
+<?grc format='1' created='3.7.11'?>
 <flow_graph>
   <timestamp>Sat Sep 21 20:51:16 2019</timestamp>
   <block>
@@ -221,7 +221,7 @@
     </param>
     <param>
       <key>id</key>
-      <value>save</value>
+      <value>trigg</value>
     </param>
     <param>
       <key>label</key>
@@ -264,7 +264,7 @@
     </param>
   </block>
   <block>
-    <key>blks2_selector</key>
+    <key>analog_const_source_x</key>
     <param>
       <key>alias</key>
       <value></value>
@@ -274,16 +274,24 @@
       <value></value>
     </param>
     <param>
+      <key>const</key>
+      <value>trigg</value>
+    </param>
+    <param>
       <key>affinity</key>
       <value></value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
+<<<<<<< HEAD
       <value>(920, 185)</value>
+=======
+      <value>(880, 244)</value>
+>>>>>>> 279f8af4ad02fedd06188969506c02ab659b691e
     </param>
     <param>
       <key>_rotation</key>
@@ -291,11 +299,7 @@
     </param>
     <param>
       <key>id</key>
-      <value>blks2_selector_0</value>
-    </param>
-    <param>
-      <key>input_index</key>
-      <value>0</value>
+      <value>analog_const_source_x_0</value>
     </param>
     <param>
       <key>maxoutbuf</key>
@@ -306,6 +310,7 @@
       <value>0</value>
     </param>
     <param>
+<<<<<<< HEAD
       <key>num_inputs</key>
       <value>1</value>
     </param>
@@ -318,12 +323,10 @@
       <value>trigger</value>
     </param>
     <param>
+=======
+>>>>>>> 279f8af4ad02fedd06188969506c02ab659b691e
       <key>type</key>
-      <value>float</value>
-    </param>
-    <param>
-      <key>vlen</key>
-      <value>1</value>
+      <value>short</value>
     </param>
   </block>
   <block>
@@ -421,14 +424,66 @@
     </param>
   </block>
   <block>
+<<<<<<< HEAD
     <key>blocks_null_sink</key>
+=======
+    <key>blocks_float_to_short</key>
+>>>>>>> 279f8af4ad02fedd06188969506c02ab659b691e
     <param>
       <key>alias</key>
       <value></value>
     </param>
     <param>
+<<<<<<< HEAD
       <key>bus_conns</key>
       <value>[[0,],]</value>
+=======
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(960, 396)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>blocks_float_to_short_0</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>scale</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>vlen</key>
+      <value>1</value>
+    </param>
+  </block>
+  <block>
+    <key>blocks_tagged_file_sink</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+>>>>>>> 279f8af4ad02fedd06188969506c02ab659b691e
     </param>
     <param>
       <key>comment</key>
@@ -444,7 +499,11 @@
     </param>
     <param>
       <key>_coordinate</key>
+<<<<<<< HEAD
       <value>(1128, 313)</value>
+=======
+      <value>(1152, 421)</value>
+>>>>>>> 279f8af4ad02fedd06188969506c02ab659b691e
     </param>
     <param>
       <key>_rotation</key>
@@ -452,15 +511,24 @@
     </param>
     <param>
       <key>id</key>
+<<<<<<< HEAD
       <value>blocks_null_sink_0</value>
+=======
+      <value>blocks_tagged_file_sink_0</value>
+>>>>>>> 279f8af4ad02fedd06188969506c02ab659b691e
     </param>
     <param>
       <key>type</key>
       <value>float</value>
     </param>
     <param>
+<<<<<<< HEAD
       <key>num_inputs</key>
       <value>1</value>
+=======
+      <key>samp_rate</key>
+      <value>int(samp_rate)</value>
+>>>>>>> 279f8af4ad02fedd06188969506c02ab659b691e
     </param>
     <param>
       <key>vlen</key>
@@ -1972,11 +2040,19 @@
     </param>
     <param>
       <key>_enabled</key>
+<<<<<<< HEAD
       <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
       <value>(888, 349)</value>
+=======
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(792, 380)</value>
+>>>>>>> 279f8af4ad02fedd06188969506c02ab659b691e
     </param>
     <param>
       <key>_rotation</key>
@@ -1988,7 +2064,7 @@
     </param>
     <param>
       <key>length</key>
-      <value>1</value>
+      <value>200000</value>
     </param>
     <param>
       <key>maxoutbuf</key>
@@ -2035,7 +2111,7 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>fft_size</key>
@@ -2198,16 +2274,15 @@
     </param>
   </block>
   <connection>
+<<<<<<< HEAD
     <source_block_id>blks2_selector_0</source_block_id>
     <sink_block_id>blocks_file_sink_0</sink_block_id>
+=======
+    <source_block_id>analog_const_source_x_0</source_block_id>
+    <sink_block_id>blocks_burst_tagger_0</sink_block_id>
+>>>>>>> 279f8af4ad02fedd06188969506c02ab659b691e
     <source_key>0</source_key>
-    <sink_key>0</sink_key>
-  </connection>
-  <connection>
-    <source_block_id>blks2_selector_0</source_block_id>
-    <sink_block_id>blocks_null_sink_0</sink_block_id>
-    <source_key>1</source_key>
-    <sink_key>0</sink_key>
+    <sink_key>1</sink_key>
   </connection>
   <connection>
     <source_block_id>blocks_complex_to_mag_0</source_block_id>
@@ -2217,13 +2292,21 @@
   </connection>
   <connection>
     <source_block_id>blocks_threshold_ff_0</source_block_id>
+<<<<<<< HEAD
     <sink_block_id>blks2_selector_0</sink_block_id>
+=======
+    <sink_block_id>blocks_burst_tagger_0</sink_block_id>
+>>>>>>> 279f8af4ad02fedd06188969506c02ab659b691e
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
   <connection>
     <source_block_id>blocks_threshold_ff_0</source_block_id>
+<<<<<<< HEAD
     <sink_block_id>trigger</sink_block_id>
+=======
+    <sink_block_id>trigger_trigger_ff_0</sink_block_id>
+>>>>>>> 279f8af4ad02fedd06188969506c02ab659b691e
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>

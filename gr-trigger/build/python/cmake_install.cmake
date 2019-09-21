@@ -1,4 +1,4 @@
-# Install script for directory: /home/erik/Dev/mini-hackathon/HackaCurtain/gr-trigger/python
+# Install script for directory: /home/deriksson/prog/HackaCurtain/gr-trigger/python
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -32,19 +32,24 @@ if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
   set(CMAKE_INSTALL_SO_NO_EXE "1")
 endif()
 
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+# Is this installation the result of a crosscompile?
+if(NOT DEFINED CMAKE_CROSSCOMPILING)
+  set(CMAKE_CROSSCOMPILING "FALSE")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python2.7/dist-packages/trigger" TYPE FILE FILES
-    "/home/erik/Dev/mini-hackathon/HackaCurtain/gr-trigger/python/__init__.py"
-    "/home/erik/Dev/mini-hackathon/HackaCurtain/gr-trigger/python/trigger_ff.py"
+    "/home/deriksson/prog/HackaCurtain/gr-trigger/python/__init__.py"
+    "/home/deriksson/prog/HackaCurtain/gr-trigger/python/trigger_ff.py"
     )
 endif()
 
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python2.7/dist-packages/trigger" TYPE FILE FILES
-    "/home/erik/Dev/mini-hackathon/HackaCurtain/gr-trigger/build/python/__init__.pyc"
-    "/home/erik/Dev/mini-hackathon/HackaCurtain/gr-trigger/build/python/trigger_ff.pyc"
-    "/home/erik/Dev/mini-hackathon/HackaCurtain/gr-trigger/build/python/__init__.pyo"
-    "/home/erik/Dev/mini-hackathon/HackaCurtain/gr-trigger/build/python/trigger_ff.pyo"
+    "/home/deriksson/prog/HackaCurtain/gr-trigger/build/python/__init__.pyc"
+    "/home/deriksson/prog/HackaCurtain/gr-trigger/build/python/trigger_ff.pyc"
+    "/home/deriksson/prog/HackaCurtain/gr-trigger/build/python/__init__.pyo"
+    "/home/deriksson/prog/HackaCurtain/gr-trigger/build/python/trigger_ff.pyo"
     )
 endif()
 

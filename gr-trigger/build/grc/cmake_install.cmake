@@ -1,4 +1,4 @@
-# Install script for directory: /home/erik/Dev/mini-hackathon/HackaCurtain/gr-trigger/grc
+# Install script for directory: /home/deriksson/prog/HackaCurtain/gr-trigger/grc
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -32,10 +32,12 @@ if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
   set(CMAKE_INSTALL_SO_NO_EXE "1")
 endif()
 
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gnuradio/grc/blocks" TYPE FILE FILES
-    "/home/erik/Dev/mini-hackathon/HackaCurtain/gr-trigger/grc/trigger_triggering.xml"
-    "/home/erik/Dev/mini-hackathon/HackaCurtain/gr-trigger/grc/trigger_trigger_ff.xml"
-    )
+# Is this installation the result of a crosscompile?
+if(NOT DEFINED CMAKE_CROSSCOMPILING)
+  set(CMAKE_CROSSCOMPILING "FALSE")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gnuradio/grc/blocks" TYPE FILE FILES "/home/deriksson/prog/HackaCurtain/gr-trigger/grc/trigger_trigger_ff.xml")
 endif()
 
