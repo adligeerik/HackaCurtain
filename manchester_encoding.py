@@ -42,8 +42,8 @@ for bit in input_msg:
 
 out_msg = out_msg[0] + out_msg + "00"
 msg = preamble + out_msg 
-print(input_msg)
-print(out_msg)
+#print(input_msg)
+#print(out_msg)
 print(msg)
 
 msg = "".join([x*1000 for x in msg])

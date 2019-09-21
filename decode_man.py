@@ -69,7 +69,7 @@ while True:
         break
 
 ans = "".join([ str (int(x)) for x in decoded_data ])
-
+#ans = ' '.join(ans[i:i+4] for i in range(0,len(ans),4))
 print(file_name + "\t" + ans)
 
 # fig = plt.figure()

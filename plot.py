@@ -4,7 +4,8 @@ import os
 import sys
 
 
-file_name = "data/B_tests_up/4.dat"
+#file_name = "data/B_tests_up/4.dat"
+file_name = sys.argv[1]
 f = open(file_name,"r")
 
 write_file_name = file_name[:-4]+"_short.dat"

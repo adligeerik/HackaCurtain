@@ -198,11 +198,11 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>0</value>
     </param>
     <param>
       <key>file</key>
-      <value>/home/erik/Dev/mini-hackathon/HackaCurtain/data/A_tests_up/4.dat</value>
+      <value>/home/erik/Dev/mini-hackathon/HackaCurtain/data/A_tests_up/2.dat</value>
     </param>
     <param>
       <key>_coordinate</key>
