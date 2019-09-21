@@ -1,1 +1,3 @@
 *.dat
+gr-trigger/build
+*.pyc
