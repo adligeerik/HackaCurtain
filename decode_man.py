@@ -5,47 +5,67 @@ import sys
 
 
 #settings
-pulse_width = 50000
+pulse_width = 95000
+window = 0
+file_name = "threshold_short.dat"
 
+
+f = open(file_name,"r")
+data = np.fromfile(f,dtype=np.float32)
 old_value = data[0]
-decoded_data = np.array(32)
-pulse_counter = 0
-dd_index = 0
+decoded_data = np.zeros(64)
+decoded_index = np.zeros(64)
+pulse_high_counter = 0
+pulse_low_counter = 0
+dd_counter = 0
 
 f_start = True
 f_zero = False
 f_one = False
 
-
-for value in data:
+i = 0
+while True:
     if f_start:
-        if value > 0:    
-            pulse_counter += 1
-        elif value != old_value: and value < 1:
-            if pulse_counter >= pulse_width:
-                pulse_counter = 0
-                f_flag = False
+        if data[i] > 0.99:    
+            pulse_high_counter += 1
+        elif data[i] != old_value and data[i] < 0.01:
+            print("Falling edge at: " + str(i) + ", Pulse counter: " + str(pulse_high_counter))
+            if pulse_high_counter >= pulse_width:
+                f_start = False
+                print("Thick pulse width: " + str(pulse_high_counter))
+                print("Start pulse end at: " + str(i))
+                i += pulse_width/4-window
+            pulse_high_counter = 0
     else:
-        if old_value < 0.01 and value > 0.99:
-            if pulse_counter > int(pulse_width/4.2):
-                if not f_zero and not f_one:
-                    #we have the first digit
-                    decoded_data[dd_index] = 0
-                    f_zero = True
-                #Change between 1 and 0, and 0 to 1
-                f_zero = not f_zero
-                f_one = not f_one
-                decoded_data[dd_index] = int(f_one)
-            elif pulse_counter > int(pulse_width/8.2):
-                if not f_zero and not f_one:
-                    #we have the first digit
-                    decoded_data[dd_index] = 1
-                    f_one = True
-                decoded_data[dd_index] = int(f_one)   
-            pulse_counter = 0
-        else:
-            pulse_counter += 1
-    old_value = value
+        #Rising edge
+        if old_value < 0.01 and data[i] > 0.99:
+            print("Rising edge at: " + str(i))
+            decoded_data[dd_counter] = 1
+            decoded_index[dd_counter] = i
+            dd_counter += 1
+            i += pulse_width/4-window
+        
+        #Falling edge
+        elif old_value > 0.01 and data[i] < 0.99:
+            print("Falling edge at: " + str(i))
+            decoded_data[dd_counter] = 0
+            decoded_index[dd_counter] = i
+            dd_counter += 1
+            i += pulse_width/4-window
+
+    old_value = data[i]
+    i += 1
+    if i >= len(data):
+        break
+    #print(i)
+
+fig = plt.figure()
+ax0 = fig.add_axes([0.1, 0.1, 0.8, 0.2], xticklabels=[], ylim=(-.2, 1.2))
+ax0.plot(data[80000:])
+ax0.plot(decoded_index, np.ones(64), '*')
+plt.savefig('foo.png')
+
+print("Decoded data: " + str(decoded_data))
             
     
     
