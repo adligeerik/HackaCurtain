@@ -39,12 +39,13 @@ ax0.plot(data[start:stop])
 start = stop + tonext
 stop = start + diff
 
+write_file.write(data[start:stop])
+
 ax1.plot(data[start:stop])
 
 start = stop + tonext
 stop = start + diff
 
-write_file.write(data[start:stop])
 
 ax2.plot(data[start:stop])
 

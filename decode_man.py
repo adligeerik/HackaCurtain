@@ -89,6 +89,7 @@ frame = deObfusicate(frame)
 cksum = checCksum(frame)
 
 print(file_name)
+print(ans)
 print("Frame: "+''.join('0x{:02X} '.format(x) for x in frame))
 print("    Key: 0x{:02X}".format((frame[0])))
 print("    Control: 0x{:02X}".format((frame[1] >> 4) & 0x0f))
