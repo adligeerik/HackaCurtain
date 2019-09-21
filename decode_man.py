@@ -3,7 +3,6 @@ import matplotlib.pyplot as plt
 import os
 import sys
 
-
 #settings
 window = 0
 file_name = sys.argv[1]
@@ -12,6 +11,20 @@ if len(sys.argv) > 2:
     verbose = sys.argv[2]
 else:
     verbose = 0
+
+def deObfusicate(frame):
+    for i in range(len(frame)-1, 0, -1):
+        frame[i] = frame[i] ^ frame[i-1]
+    return frame
+
+def checCksum(input_msg):
+    cksum = frame[0] ^ (frame[0] >> 4)
+    for i in range(1,7):
+        cksum = cksum ^ (frame[i]>>4)
+        cksum = cksum ^ frame[i]
+       
+    cksum = cksum & 0x0f 
+    return cksum
 
 
 f = open(file_name,"r")
@@ -69,16 +82,19 @@ while True:
         break
 
 ans = "".join([ str (int(x)) for x in decoded_data ])
-ans = ' '.join(ans[i:i+4] for i in range(0,len(ans),4))
-print(file_name + "\t" + ans)
+frame = ' '.join(ans[i:i+8] for i in range(0,len(ans),8)).split(' ')
+frame = [int(d, 2) for d in frame]
 
-# fig = plt.figure()
-# ax0 = fig.add_axes([0.1, 0.1, 0.8, 0.2], xticklabels=[], ylim=(-.2, 1.2))
-# ax0.plot(data)
-# ax0.plot(decoded_index, np.ones(56), '*')
-# plt.show()
+frame = deObfusicate(frame)
+cksum = checCksum(frame)
 
-
+print(file_name)
+print "Frame: "+''.join('0x{:02X} '.format(x) for x in frame)
+print "    Control: 0x{:02X}".format((frame[1] >> 4) & 0x0f)
+print "    Checksum: {}".format("ok" if cksum==0 else "error")
+print "    Address: "+''.join('{:02X} '.format(x) for x in frame[4:7])
+print "    Rolling Code: "+''.join('{:02X} '.format(x) for x in frame[2:4])
+print('')
             
     
     
