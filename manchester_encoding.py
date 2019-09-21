@@ -6,28 +6,15 @@ import sys
 
 def addCksum(input_msg):
     frame = ' '.join(input_msg[i:i+8] for i in range(0,len(input_msg),8)).split(' ')
-    print("input_msg: " + input_msg)
     frame = [int(d, 2) for d in frame]
-    print("input_msg converted:", ' '.join([bin(lst) for lst in frame]))
-    print("cksum frame: " + str(bin(frame[1])))
     frame[1] = frame[1] & 0xf0
-    print("cksum frame: " + str(bin(frame[1])))
     cksum = frame[0] ^ (frame[0] >> 4)
 
     for i in range(1,7):
-        print("Frame: " + bin(frame[i]))
-        print("nibble 1: " + bin(frame[i] & 0x0f), "nibble 2: " + bin(frame[i]>>4))
-        cksum = cksum ^ (frame[i]>>4)
-        print("Checksum in loop: " + bin(cksum))
-        cksum = cksum ^ frame[i]
-        print("Checksum in loop: " + bin(cksum))
+        cksum = cksum ^ frame[i] ^ (frame[i]>>4)
        
-    #cksum = cksum ^ (frame[6] & 0x0f)
-    print("Checksum: "  + bin(cksum))
     cksum = cksum & 0x0f 
-    print("Checksum: "  + bin(cksum))
     frame[1] = frame[1] | (cksum & 0x0f)
-    # frame = ''.join
     
     return frame
     
