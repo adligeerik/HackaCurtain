@@ -28,20 +28,23 @@ def addCksum(input_msg):
     print("Checksum: "  + bin(cksum))
     frame[1] = frame[1] | (cksum & 0x0f)
     # frame = ''.join
-    ans = "".join([ bin(x)[2:] for x in frame ])
-    return ans
     
-def obfusicate():
-    for i in range(1, frame.size):
+    return frame
+    
+def obfusicate(frame):
+    for i in range(1, len(frame)):
         frame[i] = frame[i] ^ frame[i-1]
-
+    return frame
 
 #input_msg = "10101110111010101110100101100101111111011010001111111111"
 
 input_msg = sys.argv[1]
 preamble = "0011001100110011001100110011001111"
 
-input_msg = addCksum(input_msg)
+frame = addCksum(input_msg)
+frame = obfusicate(frame)
+input_msg = "".join([ format(x, '#010b')[2:] for x in frame ])
+print(input_msg)
 
 def inv(a):
     if a == 1:
