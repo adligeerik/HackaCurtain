@@ -33,11 +33,16 @@ sudo make install
 sudo ldconfig
 ```
 ## How to use
+### "Hacking"
 When the address is known run `hack_roll_code.py`, it will run through the rolling code with an interval specefied. Example with command 2 (up) address 985e5c and invervall of 50 for the rolling code:
 ```
 python2 hack_roll_code.py -c 2 -a 985E5C -s 0000 -i 50
 ```
 `hack_roll_code.py` calls `top_block_transmit.py` and generates a new test code every second and transmit it untill the next code is made. Depending on how large the rolling code is it will take between a few seconds upp till 15 minutes to "hack" a curtain.
+
+### Sniffing
+
+## Scripts
 
 **scope.grc**
 
@@ -55,7 +60,9 @@ Obfuscation the message calculates the checksum and encodes the message with Man
 
 Sends a message on 433.42Mhz
 
+## Results and plots
 
+With this code we mananged to hack (our own) curtains to move up and down, we manage to control them from the ground about 100 meters away, and that with just a hackrf on and some (allot of) time :).
 
 ![Recorded message with decoded edges (stars)](https://github.com/adligeerik/HackaCurtain/blob/master/plots/edgefinder.png)
 
