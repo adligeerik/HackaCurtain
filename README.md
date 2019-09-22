@@ -24,6 +24,21 @@ make install
 ldconfig
 ```
 
+* Instal custom block 
+```
+cd gr-trigger/build
+make ../
+make
+sudo make install
+sudo ldconfig
+```
+## How to use
+When the address is known run `hack_roll_code.py`, it will run through the rolling code with an interval specefied. Example with command 2 (up) address 985e5c and invervall of 50 for the rolling code:
+```
+python2 hack_roll_code.py -c 2 -a 985E5C -s 0000 -i 50
+```
+`hack_roll_code.py` calls `top_block_transmit.py` and generates a new test code every second and transmit it untill the next code is made. Depending on how large the rolling code is it will take between a few seconds upp till 15 minutes to "hack" a curtain.
+
 **scope.grc**
 
 Records on 433.42Mhz processes it with a threshold for high and low. Then saves it 
