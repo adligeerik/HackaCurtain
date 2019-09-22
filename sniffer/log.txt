@@ -1,0 +1,60 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+./data/threshold_B_down_short.dat
+10101001111000111110000001100100110101100111111000100010
+Frame: 0xA9 0x4A 0x03 0x84 0xB2 0xA8 0x5C 
+    Key: 0xA9
+    Control: 0x04
+    Checksum: ok
+    Address: B2 A8 5C 
+    Rolling Code: 03 84 
+
+./data/threshold_B_upp_short.dat
+10101010100001001000011100000010101100000001100001000100
+Frame: 0xAA 0x2E 0x03 0x85 0xB2 0xA8 0x5C 
+    Key: 0xAA
+    Control: 0x02
+    Checksum: ok
+    Address: B2 A8 5C 
+    Rolling Code: 03 85 
+
+./data/threshold_short.dat
+10101110111010101110100101100101111111011010001111111111
+Frame: 0xAE 0x44 0x03 0x8C 0x98 0x5E 0x5C 
+    Key: 0xAE
+    Control: 0x04
+    Checksum: ok
+    Address: 98 5E 5C 
+    Rolling Code: 03 8C 
+
+./data/threshold_short.dat
+10101110111010101110100101100101111111011010001111111111
+Frame: 0xAE 0x44 0x03 0x8C 0x98 0x5E 0x5C 
+    Key: 0xAE
+    Control: 0x04
+    Checksum: ok
+    Address: 98 5E 5C 
+    Rolling Code: 03 8C 
+
+data/threshold_A_down_short.dat
+10100110111001001110011100000011100110111100010110011001
+Frame: 0xA6 0x42 0x03 0xE4 0x98 0x5E 0x5C 
+    Key: 0xA6
+    Control: 0x04
+    Checksum: ok
+    Address: 98 5E 5C 
+    Rolling Code: 03 E4 
+
