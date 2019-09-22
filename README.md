@@ -41,6 +41,7 @@ python2 hack_roll_code.py -c 2 -a 985E5C -s 0000 -i 50
 `hack_roll_code.py` calls `top_block_transmit.py` and generates a new test code every second and transmit it untill the next code is made. Depending on how large the rolling code is it will take between a few seconds upp till 15 minutes to "hack" a curtain.
 
 ### Sniffing
+In the folder `sniffer/`, run `python top_block_sniffer.py`, it will listen on 433.42Mhz and save one second of samples when it is triggered. The script saves samples in the same folder with extension ".dat". To decode the samples run `./sniffer.sh 2> /dev/null`, the script calls the `decoder_man.py` and pipes the output from the python script in to "log.txt". In the log file the decoded messages will be displayed with as rolling code, address and command.
 
 ## Scripts
 
