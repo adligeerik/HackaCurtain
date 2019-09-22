@@ -1,60 +1,144 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-./data/threshold_B_down_short.dat
-10101001111000111110000001100100110101100111111000100010
-Frame: 0xA9 0x4A 0x03 0x84 0xB2 0xA8 0x5C 
-    Key: 0xA9
-    Control: 0x04
-    Checksum: ok
-    Address: B2 A8 5C 
-    Rolling Code: 03 84 
-
-./data/threshold_B_upp_short.dat
-10101010100001001000011100000010101100000001100001000100
-Frame: 0xAA 0x2E 0x03 0x85 0xB2 0xA8 0x5C 
-    Key: 0xAA
+data/file7_0_20.71993400.dat
+10101011100010001000110001100101111111011010001111111111
+Frame: 0xAB 0x23 0x04 0xE9 0x98 0x5E 0x5C 
+    Key: 0xAB
     Control: 0x02
     Checksum: ok
-    Address: B2 A8 5C 
-    Rolling Code: 03 85 
+    Address: 98 5E 5C 
+    Rolling Code: 04 E9 
 
-./data/threshold_short.dat
-10101110111010101110100101100101111111011010001111111111
-Frame: 0xAE 0x44 0x03 0x8C 0x98 0x5E 0x5C 
-    Key: 0xAE
+data/file7_10_31.81277650.dat
+10100101111001011110000100010010100010101101010010001000
+Frame: 0xA5 0x40 0x04 0xF3 0x98 0x5E 0x5C 
+    Key: 0xA5
     Control: 0x04
     Checksum: ok
     Address: 98 5E 5C 
-    Rolling Code: 03 8C 
+    Rolling Code: 04 F3 
 
-./data/threshold_short.dat
-10101110111010101110100101100101111111011010001111111111
-Frame: 0xAE 0x44 0x03 0x8C 0x98 0x5E 0x5C 
-    Key: 0xAE
-    Control: 0x04
-    Checksum: ok
-    Address: 98 5E 5C 
-    Rolling Code: 03 8C 
-
-data/threshold_A_down_short.dat
-10100110111001001110011100000011100110111100010110011001
-Frame: 0xA6 0x42 0x03 0xE4 0x98 0x5E 0x5C 
+data/file7_11_32.96392800.dat
+10100110111000101110011000010010100010101101010010001000
+Frame: 0xA6 0x44 0x04 0xF4 0x98 0x5E 0x5C 
     Key: 0xA6
     Control: 0x04
     Checksum: ok
     Address: 98 5E 5C 
-    Rolling Code: 03 E4 
+    Rolling Code: 04 F4 
+
+data/file7_1_22.03448000.dat
+10101100100010111000111101100101111111011010001111111111
+Frame: 0xAC 0x27 0x04 0xEA 0x98 0x5E 0x5C 
+    Key: 0xAC
+    Control: 0x02
+    Checksum: ok
+    Address: 98 5E 5C 
+    Rolling Code: 04 EA 
+
+data/file7_12_34.32561200.dat
+10100111100001011000000101110100111011001011001011101110
+Frame: 0xA7 0x22 0x04 0xF5 0x98 0x5E 0x5C 
+    Key: 0xA7
+    Control: 0x02
+    Checksum: ok
+    Address: 98 5E 5C 
+    Rolling Code: 04 F5 
+
+data/file7_13_35.32563500.dat
+10101000100001101000001001110100111011001011001011101110
+Frame: 0xA8 0x2E 0x04 0xF6 0x98 0x5E 0x5C 
+    Key: 0xA8
+    Control: 0x02
+    Checksum: ok
+    Address: 98 5E 5C 
+    Rolling Code: 04 F6 
+
+data/file7_14_36.29397300.dat
+10101001100001111000001101110100111011001011001011101110
+Frame: 0xA9 0x2E 0x04 0xF7 0x98 0x5E 0x5C 
+    Key: 0xA9
+    Control: 0x02
+    Checksum: ok
+    Address: 98 5E 5C 
+    Rolling Code: 04 F7 
+
+data/file7_15_37.96753400.dat
+10101010100010001000110001110100111011001011001011101110
+Frame: 0xAA 0x22 0x04 0xF8 0x98 0x5E 0x5C 
+    Key: 0xAA
+    Control: 0x02
+    Checksum: ok
+    Address: 98 5E 5C 
+    Rolling Code: 04 F8 
+
+data/file7_2_23.18364400.dat
+10101101100010101000111001100101111111011010001111111111
+Frame: 0xAD 0x27 0x04 0xEB 0x98 0x5E 0x5C 
+    Key: 0xAD
+    Control: 0x02
+    Checksum: ok
+    Address: 98 5E 5C 
+    Rolling Code: 04 EB 
+
+data/file7_3_24.29091550.dat
+10101110100011011000100101100101111111011010001111111111
+Frame: 0xAE 0x23 0x04 0xEC 0x98 0x5E 0x5C 
+    Key: 0xAE
+    Control: 0x02
+    Checksum: ok
+    Address: 98 5E 5C 
+    Rolling Code: 04 EC 
+
+data/file7_4_25.46099250.dat
+10101111111010101110111000000011100110111100010110011001
+Frame: 0xAF 0x45 0x04 0xED 0x98 0x5E 0x5C 
+    Key: 0xAF
+    Control: 0x04
+    Checksum: ok
+    Address: 98 5E 5C 
+    Rolling Code: 04 ED 
+
+data/file7_5_26.48132300.dat
+10100000111010011110110100000011100110111100010110011001
+Frame: 0xA0 0x49 0x04 0xEE 0x98 0x5E 0x5C 
+    Key: 0xA0
+    Control: 0x04
+    Checksum: ok
+    Address: 98 5E 5C 
+    Rolling Code: 04 EE 
+
+data/file7_6_27.35736500.dat
+10100001111010001110110000000011100110111100010110011001
+Frame: 0xA1 0x49 0x04 0xEF 0x98 0x5E 0x5C 
+    Key: 0xA1
+    Control: 0x04
+    Checksum: ok
+    Address: 98 5E 5C 
+    Rolling Code: 04 EF 
+
+data/file7_7_28.26964150.dat
+10100010111001101110001000010010100010101101010010001000
+Frame: 0xA2 0x44 0x04 0xF0 0x98 0x5E 0x5C 
+    Key: 0xA2
+    Control: 0x04
+    Checksum: ok
+    Address: 98 5E 5C 
+    Rolling Code: 04 F0 
+
+data/file7_8_29.38207200.dat
+10100011111001111110001100010010100010101101010010001000
+Frame: 0xA3 0x44 0x04 0xF1 0x98 0x5E 0x5C 
+    Key: 0xA3
+    Control: 0x04
+    Checksum: ok
+    Address: 98 5E 5C 
+    Rolling Code: 04 F1 
+
+data/file7_9_30.86017300.dat
+10100100111001001110000000010010100010101101010010001000
+Frame: 0xA4 0x40 0x04 0xF2 0x98 0x5E 0x5C 
+    Key: 0xA4
+    Control: 0x04
+    Checksum: ok
+    Address: 98 5E 5C 
+    Rolling Code: 04 F2 
 
