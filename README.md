@@ -77,6 +77,6 @@ With this code we mananged to hack (our own) curtains to move up and down, we ma
 
 *Recorded message over time*
 
-![Comparison between different remotes, up/down](https://github.com/adligeerik/HackaCurtain/blob/master/plots/check_code_does_not_change.png)
+![Comparison between different remotes, up/down](https://github.com/adligeerik/HackaCurtain/blob/master/plots/compare_A_B_Up_down_AABB.png)
 
 *Comparison between different remotes, up/down*
