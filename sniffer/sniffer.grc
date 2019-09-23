@@ -170,85 +170,11 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(24, 397)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>id</key>
-      <value>save</value>
-    </param>
-    <param>
-      <key>value</key>
-      <value>0</value>
-    </param>
-  </block>
-  <block>
-    <key>variable_check_box</key>
-    <param>
-      <key>comment</key>
-      <value></value>
-    </param>
-    <param>
-      <key>value</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>false</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(24, 479)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>grid_pos</key>
-      <value></value>
-    </param>
-    <param>
-      <key>id</key>
-      <value>trigg</value>
-    </param>
-    <param>
-      <key>label</key>
-      <value></value>
-    </param>
-    <param>
-      <key>notebook</key>
-      <value></value>
-    </param>
-    <param>
-      <key>true</key>
-      <value>1</value>
-    </param>
-  </block>
-  <block>
-    <key>variable</key>
-    <param>
-      <key>comment</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_enabled</key>
       <value>True</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(24, 589)</value>
+      <value>(24, 397)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -261,53 +187,6 @@
     <param>
       <key>value</key>
       <value>int(100e3)</value>
-    </param>
-  </block>
-  <block>
-    <key>analog_const_source_x</key>
-    <param>
-      <key>alias</key>
-      <value></value>
-    </param>
-    <param>
-      <key>comment</key>
-      <value></value>
-    </param>
-    <param>
-      <key>const</key>
-      <value>trigg</value>
-    </param>
-    <param>
-      <key>affinity</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(880, 244)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>id</key>
-      <value>analog_const_source_x_0</value>
-    </param>
-    <param>
-      <key>maxoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>minoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>type</key>
-      <value>short</value>
     </param>
   </block>
   <block>
@@ -338,7 +217,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1120, 183)</value>
+      <value>(1104, 127)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -389,7 +268,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(464, 201)</value>
+      <value>(408, 137)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -406,57 +285,6 @@
     <param>
       <key>minoutbuf</key>
       <value>0</value>
-    </param>
-    <param>
-      <key>vlen</key>
-      <value>1</value>
-    </param>
-  </block>
-  <block>
-    <key>blocks_file_sink</key>
-    <param>
-      <key>append</key>
-      <value>False</value>
-    </param>
-    <param>
-      <key>alias</key>
-      <value></value>
-    </param>
-    <param>
-      <key>comment</key>
-      <value></value>
-    </param>
-    <param>
-      <key>affinity</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>file</key>
-      <value>folder+datetime.now().strftime("%Y.%m.%d.%H.%M.%S")+".dat"</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(320, 46)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>id</key>
-      <value>blocks_file_sink_0</value>
-    </param>
-    <param>
-      <key>type</key>
-      <value>float</value>
-    </param>
-    <param>
-      <key>unbuffered</key>
-      <value>False</value>
     </param>
     <param>
       <key>vlen</key>
@@ -483,7 +311,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(960, 396)</value>
+      <value>(920, 268)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -530,7 +358,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1152, 421)</value>
+      <value>(1104, 36)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -573,7 +401,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(664, 182)</value>
+      <value>(584, 118)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1939,7 +1767,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(176, 140)</value>
+      <value>(176, 76)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -2062,7 +1890,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(760, 389)</value>
+      <value>(744, 261)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -2074,7 +1902,7 @@
     </param>
     <param>
       <key>length</key>
-      <value>int(200)</value>
+      <value>60</value>
     </param>
     <param>
       <key>maxoutbuf</key>
@@ -2086,7 +1914,7 @@
     </param>
     <param>
       <key>threshold</key>
-      <value>0.5</value>
+      <value>0.05</value>
     </param>
   </block>
   <block>
@@ -2129,7 +1957,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(448, 341)</value>
+      <value>(408, 237)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -2216,7 +2044,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(944, 528)</value>
+      <value>(904, 367)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -2303,7 +2131,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(888, 31)</value>
+      <value>(800, 31)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -2366,12 +2194,6 @@
       <value>Counts</value>
     </param>
   </block>
-  <connection>
-    <source_block_id>analog_const_source_x_0</source_block_id>
-    <sink_block_id>blocks_burst_tagger_0</sink_block_id>
-    <source_key>0</source_key>
-    <sink_key>1</sink_key>
-  </connection>
   <connection>
     <source_block_id>blocks_burst_tagger_0</source_block_id>
     <sink_block_id>blocks_tagged_file_sink_0</sink_block_id>

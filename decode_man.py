@@ -88,6 +88,7 @@ frame = [int(d, 2) for d in frame]
 frame = deObfusicate(frame)
 cksum = checCksum(frame)
 
+#if int(ans,2) != 0 and cksum != 0:
 print(file_name)
 print(ans)
 print("Frame: "+''.join('0x{:02X} '.format(x) for x in frame))
