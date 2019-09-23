@@ -38,17 +38,23 @@ dd_counter = 0
 
 f_start = True
 f_cal = True
+f_cal_start = False
 
 i = 0
 while True:
     if f_start:
-        if f_cal and (old_value > 0.01 and data[i] < 0.99): 
+        #detect first rising edge
+        if not f_cal_start and (old_value < 0.01 and data[i] > 0.99):
+            f_cal_start = True
+            pulse_high_counter = 0
+        #detect falling edge
+        elif f_cal_start and f_cal and (old_value > 0.01 and data[i] < 0.99): 
             f_cal =  False
             pulse_width = int(pulse_high_counter*1.7)
             pulse_high_counter = 0
             if verbose:
                 print("Thick pulse width: " + str(pulse_width))
-        elif data[i] != old_value and data[i] < 0.01:
+        elif not f_cal and data[i] != old_value and data[i] < 0.01:
             if verbose:
                 print("Falling edge at: " + str(i) + ", Pulse counter: " + str(pulse_high_counter))
             if pulse_high_counter >= pulse_width:
@@ -88,16 +94,16 @@ frame = [int(d, 2) for d in frame]
 frame = deObfusicate(frame)
 cksum = checCksum(frame)
 
-#if int(ans,2) != 0 and cksum != 0:
-print(file_name)
-print(ans)
-print("Frame: "+''.join('0x{:02X} '.format(x) for x in frame))
-print("    Key: 0x{:02X}".format((frame[0])))
-print("    Control: 0x{:02X}".format((frame[1] >> 4) & 0x0f))
-print("    Checksum: {}".format("ok" if cksum==0 else "error"))
-print("    Address: "+''.join('{:02X} '.format(x) for x in frame[4:7]))
-print("    Rolling Code: "+''.join('{:02X} '.format(x) for x in frame[2:4]))
-print('')
+if verbose or (int(ans,2) != 0 and cksum == 0):
+    print(file_name)
+    print(ans)
+    print("Frame: "+''.join('0x{:02X} '.format(x) for x in frame))
+    print("    Key: 0x{:02X}".format((frame[0])))
+    print("    Control: 0x{:02X}".format((frame[1] >> 4) & 0x0f))
+    print("    Checksum: {}".format("ok" if cksum==0 else "error"))
+    print("    Address: "+''.join('{:02X} '.format(x) for x in frame[4:7]))
+    print("    Rolling Code: "+''.join('{:02X} '.format(x) for x in frame[2:4]))
+    print('')
             
     
     

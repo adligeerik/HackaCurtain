@@ -34,6 +34,8 @@ sudo ldconfig
 ```
 ## How to use
 ### "Hacking"
+This part is used to control a curtain
+
 When the address is known run `hack_roll_code.py`, it will run through the rolling code with an interval specefied. Example with command 2 (up) address 985e5c and invervall of 50 for the rolling code:
 ```
 python2 hack_roll_code.py -c 2 -a 985E5C -s 0000 -i 50
@@ -41,6 +43,9 @@ python2 hack_roll_code.py -c 2 -a 985E5C -s 0000 -i 50
 `hack_roll_code.py` calls `top_block_transmit.py` and generates a new test code every second and transmit it untill the next code is made. Depending on how large the rolling code is it will take between a few seconds upp till 15 minutes to "hack" a curtain.
 
 ### Sniffing
+This part is used to listen to other curtains and decode the messages they contain
+
+In the folder `sniffer/`, run `python top_block_sniffer.py`, it will listen on 433.42Mhz and save one second of samples when it is triggered. The script saves samples in the same folder with extension ".dat". To decode the samples run `./sniffer.sh 2> /dev/null`, the script calls the `decoder_man.py` and pipes the output from the python script in to "log.txt". In the log file the decoded messages will be displayed with as rolling code, address and command.
 
 ## Scripts
 
@@ -72,6 +77,6 @@ With this code we mananged to hack (our own) curtains to move up and down, we ma
 
 *Recorded message over time*
 
-![Comparison between different remotes, up/down](https://github.com/adligeerik/HackaCurtain/blob/master/plots/check_code_does_not_change.png)
+![Comparison between different remotes, up/down](https://github.com/adligeerik/HackaCurtain/blob/master/plots/compare_A_B_Up_down_AABB.png)
 
 *Comparison between different remotes, up/down*
