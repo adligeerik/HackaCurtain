@@ -3,7 +3,7 @@
 ##################################################
 # GNU Radio Python Flow Graph
 # Title: Top Block
-# Generated: Fri Oct  4 21:22:20 2019
+# Generated: Mon Oct 14 19:29:40 2019
 ##################################################
 
 if __name__ == '__main__':
@@ -53,7 +53,7 @@ class top_block(grc_wxgui.top_block_gui):
         ##################################################
         self.wxgui_scopesink2_2 = scopesink2.scope_sink_f(
         	self.GetWin(),
-        	title="Scope Plot",
+        	title='Scope Plot',
         	sample_rate=samp_rate,
         	v_scale=0,
         	v_offset=0,
@@ -62,11 +62,11 @@ class top_block(grc_wxgui.top_block_gui):
         	xy_mode=False,
         	num_inputs=1,
         	trig_mode=wxgui.TRIG_MODE_AUTO,
-        	y_axis_label="Counts",
+        	y_axis_label='Counts',
         )
         self.Add(self.wxgui_scopesink2_2.win)
         self.trigger_trigger_ff_0_0 = trigger.trigger_ff(0.01, 1000)
-        self.osmosdr_source_0 = osmosdr.source( args="numchan=" + str(1) + " " + "" )
+        self.osmosdr_source_0 = osmosdr.source( args="numchan=" + str(1) + " " + '' )
         self.osmosdr_source_0.set_sample_rate(samp_rate)
         self.osmosdr_source_0.set_center_freq(center_freq, 0)
         self.osmosdr_source_0.set_freq_corr(0, 0)
@@ -76,36 +76,38 @@ class top_block(grc_wxgui.top_block_gui):
         self.osmosdr_source_0.set_gain(30, 0)
         self.osmosdr_source_0.set_if_gain(40, 0)
         self.osmosdr_source_0.set_bb_gain(30, 0)
-        self.osmosdr_source_0.set_antenna("", 0)
+        self.osmosdr_source_0.set_antenna('', 0)
         self.osmosdr_source_0.set_bandwidth(0, 0)
-          
+
         self.low_pass_filter_0 = filter.fir_filter_ccf(1, firdes.low_pass(
         	1, samp_rate, 200e3, 10e4, firdes.WIN_HAMMING, 6.76))
-        self.blocks_threshold_ff_0 = blocks.threshold_ff(0.9, 1.2, 0)
+        self.blocks_threshold_ff_0 = blocks.threshold_ff(1.33, 1.4, 0)
         self.blocks_tagged_file_sink_0_0 = blocks.tagged_file_sink(gr.sizeof_float*1, int(samp_rate))
         self.blocks_multiply_const_vxx_0 = blocks.multiply_const_vff((10000, ))
-        self.blocks_moving_average_xx_0 = blocks.moving_average_ff(1000, 1.0/10000, 40)
+        self.blocks_moving_average_xx_0 = blocks.moving_average_ff(1000, 1.0/10000, 40, 1)
         self.blocks_float_to_short_0_0 = blocks.float_to_short(1, 1)
         self.blocks_complex_to_mag_squared_0 = blocks.complex_to_mag_squared(1)
         self.blocks_burst_tagger_0_0 = blocks.burst_tagger(gr.sizeof_float)
-        self.blocks_burst_tagger_0_0.set_true_tag("burst",True)
-        self.blocks_burst_tagger_0_0.set_false_tag("burst",False)
-        	
+        self.blocks_burst_tagger_0_0.set_true_tag('burst',True)
+        self.blocks_burst_tagger_0_0.set_false_tag('burst',False)
+
+
+
 
         ##################################################
         # Connections
         ##################################################
-        self.connect((self.blocks_burst_tagger_0_0, 0), (self.blocks_tagged_file_sink_0_0, 0))    
-        self.connect((self.blocks_complex_to_mag_squared_0, 0), (self.blocks_multiply_const_vxx_0, 0))    
-        self.connect((self.blocks_float_to_short_0_0, 0), (self.blocks_burst_tagger_0_0, 1))    
-        self.connect((self.blocks_moving_average_xx_0, 0), (self.blocks_burst_tagger_0_0, 0))    
-        self.connect((self.blocks_moving_average_xx_0, 0), (self.blocks_threshold_ff_0, 0))    
-        self.connect((self.blocks_moving_average_xx_0, 0), (self.wxgui_scopesink2_2, 0))    
-        self.connect((self.blocks_multiply_const_vxx_0, 0), (self.blocks_moving_average_xx_0, 0))    
-        self.connect((self.blocks_threshold_ff_0, 0), (self.trigger_trigger_ff_0_0, 0))    
-        self.connect((self.low_pass_filter_0, 0), (self.blocks_complex_to_mag_squared_0, 0))    
-        self.connect((self.osmosdr_source_0, 0), (self.low_pass_filter_0, 0))    
-        self.connect((self.trigger_trigger_ff_0_0, 0), (self.blocks_float_to_short_0_0, 0))    
+        self.connect((self.blocks_burst_tagger_0_0, 0), (self.blocks_tagged_file_sink_0_0, 0))
+        self.connect((self.blocks_complex_to_mag_squared_0, 0), (self.blocks_multiply_const_vxx_0, 0))
+        self.connect((self.blocks_float_to_short_0_0, 0), (self.blocks_burst_tagger_0_0, 1))
+        self.connect((self.blocks_moving_average_xx_0, 0), (self.blocks_burst_tagger_0_0, 0))
+        self.connect((self.blocks_moving_average_xx_0, 0), (self.blocks_threshold_ff_0, 0))
+        self.connect((self.blocks_moving_average_xx_0, 0), (self.wxgui_scopesink2_2, 0))
+        self.connect((self.blocks_multiply_const_vxx_0, 0), (self.blocks_moving_average_xx_0, 0))
+        self.connect((self.blocks_threshold_ff_0, 0), (self.trigger_trigger_ff_0_0, 0))
+        self.connect((self.low_pass_filter_0, 0), (self.blocks_complex_to_mag_squared_0, 0))
+        self.connect((self.osmosdr_source_0, 0), (self.low_pass_filter_0, 0))
+        self.connect((self.trigger_trigger_ff_0_0, 0), (self.blocks_float_to_short_0_0, 0))
 
     def get_vec_length(self):
         return self.vec_length
@@ -118,9 +120,9 @@ class top_block(grc_wxgui.top_block_gui):
 
     def set_samp_rate(self, samp_rate):
         self.samp_rate = samp_rate
-        self.low_pass_filter_0.set_taps(firdes.low_pass(1, self.samp_rate, 200e3, 10e4, firdes.WIN_HAMMING, 6.76))
-        self.osmosdr_source_0.set_sample_rate(self.samp_rate)
         self.wxgui_scopesink2_2.set_sample_rate(self.samp_rate)
+        self.osmosdr_source_0.set_sample_rate(self.samp_rate)
+        self.low_pass_filter_0.set_taps(firdes.low_pass(1, self.samp_rate, 200e3, 10e4, firdes.WIN_HAMMING, 6.76))
 
     def get_folder(self):
         return self.folder

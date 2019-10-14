@@ -52,10 +52,10 @@ while True:
             f_cal =  False
             pulse_width = int(pulse_high_counter*1.7)
             pulse_high_counter = 0
-            if verbose:
+            if verbose == 2:
                 print("Thick pulse width: " + str(pulse_width))
         elif not f_cal and data[i] != old_value and data[i] < 0.01:
-            if verbose:
+            if verbose == 2:
                 print("Falling edge at: " + str(i) + ", Pulse counter: " + str(pulse_high_counter))
             if pulse_high_counter >= pulse_width:
                 f_start = False
@@ -66,7 +66,7 @@ while True:
     else:
         #Rising edge
         if old_value < 0.01 and data[i] > 0.99:
-            if verbose:
+            if verbose == 2:
                 print("Rising edge at: " + str(i))
             decoded_data[dd_counter] = 1
             decoded_index[dd_counter] = i
@@ -75,7 +75,7 @@ while True:
         
         #Falling edge
         elif old_value > 0.01 and data[i] < 0.99:
-            if verbose:
+            if verbose == 2:
                 print("Falling edge at: " + str(i))
             decoded_data[dd_counter] = 0
             decoded_index[dd_counter] = i
@@ -94,7 +94,7 @@ frame = [int(d, 2) for d in frame]
 frame = deObfusicate(frame)
 cksum = checCksum(frame)
 
-if verbose or (int(ans,2) != 0 and cksum == 0):
+if (int(verbose) >= 1)  or (int(ans,2) != 0 and cksum == 0):
     print(file_name)
     print(ans)
     print("Frame: "+''.join('0x{:02X} '.format(x) for x in frame))
