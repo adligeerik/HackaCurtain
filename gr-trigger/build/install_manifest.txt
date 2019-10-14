@@ -1,9 +1,0 @@
-/usr/local/lib/cmake/trigger/triggerConfig.cmake
-/usr/local/include/trigger/api.h
-/usr/local/lib/python2.7/dist-packages/trigger/__init__.py
-/usr/local/lib/python2.7/dist-packages/trigger/trigger_ff.py
-/usr/local/lib/python2.7/dist-packages/trigger/__init__.pyc
-/usr/local/lib/python2.7/dist-packages/trigger/trigger_ff.pyc
-/usr/local/lib/python2.7/dist-packages/trigger/__init__.pyo
-/usr/local/lib/python2.7/dist-packages/trigger/trigger_ff.pyo
-/usr/local/share/gnuradio/grc/blocks/trigger_trigger_ff.xml

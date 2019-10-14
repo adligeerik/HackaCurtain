@@ -142,3 +142,719 @@ Frame: 0xA4 0x40 0x04 0xF2 0x98 0x5E 0x5C
     Address: 98 5E 5C 
     Rolling Code: 04 F2 
 
+data/file7_0_3.29624600.dat
+10101101111010011110101000000010101100000001100001000100
+Frame: 0xAD 0x44 0x03 0xE8 0xB2 0xA8 0x5C 
+    Key: 0xAD
+    Control: 0x04
+    Checksum: ok
+    Address: B2 A8 5C 
+    Rolling Code: 03 E8 
+
+data/file7_1_4.30012400.dat
+10101110100011101000110101100100110101100111111000100010
+Frame: 0xAE 0x20 0x03 0xE9 0xB2 0xA8 0x5C 
+    Key: 0xAE
+    Control: 0x02
+    Checksum: ok
+    Address: B2 A8 5C 
+    Rolling Code: 03 E9 
+
+data/file7_2_6.89142950.dat
+10101111111010111110100000000010101100000001100001000100
+Frame: 0xAF 0x44 0x03 0xEA 0xB2 0xA8 0x5C 
+    Key: 0xAF
+    Control: 0x04
+    Checksum: ok
+    Address: B2 A8 5C 
+    Rolling Code: 03 EA 
+
+data/file7_0_3.29624600.dat
+10101101111010011110101000000010101100000001100001000100
+Frame: 0xAD 0x44 0x03 0xE8 0xB2 0xA8 0x5C 
+    Key: 0xAD
+    Control: 0x04
+    Checksum: ok
+    Address: B2 A8 5C 
+    Rolling Code: 03 E8 
+
+Thick pulse width: 8663
+Falling edge at: 70027, Pulse counter: 5091
+Falling edge at: 84726, Pulse counter: 9756
+Rising edge at: 87184
+Falling edge at: 89869
+Rising edge at: 92332
+Falling edge at: 95019
+Falling edge at: 97594
+Rising edge at: 100065
+Rising edge at: 102642
+Falling edge at: 105320
+Rising edge at: 107785
+Falling edge at: 110471
+Falling edge at: 113046
+Falling edge at: 115621
+Rising edge at: 118090
+Falling edge at: 120771
+Rising edge at: 123235
+Rising edge at: 125808
+Rising edge at: 128385
+Falling edge at: 131072
+Falling edge at: 133648
+Falling edge at: 136222
+Falling edge at: 138798
+Falling edge at: 141372
+Rising edge at: 143851
+Rising edge at: 146413
+Falling edge at: 149098
+Rising edge at: 151568
+Falling edge at: 154249
+Falling edge at: 156825
+Falling edge at: 159399
+Rising edge at: 161874
+Rising edge at: 164441
+Rising edge at: 167016
+Rising edge at: 169588
+Rising edge at: 172166
+Falling edge at: 174850
+Rising edge at: 177314
+Rising edge at: 179891
+Rising edge at: 182465
+Rising edge at: 185047
+Rising edge at: 187612
+Rising edge at: 190193
+Falling edge at: 192877
+Falling edge at: 195451
+Falling edge at: 198027
+Falling edge at: 200602
+Falling edge at: 203178
+Falling edge at: 205753
+Rising edge at: 208215
+Rising edge at: 210798
+Rising edge at: 213364
+Falling edge at: 216053
+Rising edge at: 218519
+Rising edge at: 221090
+Rising edge at: 223667
+Falling edge at: 226354
+Rising edge at: 228822
+file8_5_11.71571200.dat
+10100110100010111000001101000111110111111000000111011101
+Frame: 0xA6 0x2D 0x08 0xC4 0x98 0x5E 0x5C 
+    Key: 0xA6
+    Control: 0x02
+    Checksum: ok
+    Address: 98 5E 5C 
+    Rolling Code: 08 C4 
+
+Thick pulse width: 8666
+Falling edge at: 70402, Pulse counter: 5095
+Falling edge at: 85102, Pulse counter: 9751
+Rising edge at: 87552
+Falling edge at: 90244
+Rising edge at: 92717
+Falling edge at: 95393
+Falling edge at: 97969
+Rising edge at: 100432
+Rising edge at: 103008
+Rising edge at: 105583
+Rising edge at: 108162
+Falling edge at: 110845
+Falling edge at: 113420
+Falling edge at: 115996
+Rising edge at: 118461
+Falling edge at: 121147
+Rising edge at: 123610
+Falling edge at: 126297
+Rising edge at: 128761
+Falling edge at: 131447
+Falling edge at: 134023
+Falling edge at: 136598
+Falling edge at: 139172
+Falling edge at: 141747
+Rising edge at: 144210
+Falling edge at: 146899
+Falling edge at: 149474
+Rising edge at: 151938
+Falling edge at: 154624
+Falling edge at: 157200
+Falling edge at: 159776
+Rising edge at: 162236
+Rising edge at: 164816
+Rising edge at: 167390
+Rising edge at: 169962
+Rising edge at: 172539
+Falling edge at: 175227
+Rising edge at: 177695
+Rising edge at: 180262
+Rising edge at: 182841
+Rising edge at: 185413
+Rising edge at: 187999
+Rising edge at: 190564
+Falling edge at: 193253
+Falling edge at: 195828
+Falling edge at: 198404
+Falling edge at: 200979
+Falling edge at: 203554
+Falling edge at: 206129
+Rising edge at: 208593
+Rising edge at: 211171
+Rising edge at: 213741
+Falling edge at: 216430
+Rising edge at: 218900
+Rising edge at: 221472
+Rising edge at: 224041
+Falling edge at: 226731
+Rising edge at: 229196
+file8_6_14.13337600.dat
+10100111100010101000001001000111110111111000000111011101
+Frame: 0xA7 0x2D 0x08 0xC5 0x98 0x5E 0x5C 
+    Key: 0xA7
+    Control: 0x02
+    Checksum: ok
+    Address: 98 5E 5C 
+    Rolling Code: 08 C5 
+
+Thick pulse width: 8664
+Falling edge at: 70432, Pulse counter: 5095
+Falling edge at: 85129, Pulse counter: 9752
+Rising edge at: 87586
+Falling edge at: 90272
+Rising edge at: 92740
+Falling edge at: 95422
+Rising edge at: 97903
+Falling edge at: 100572
+Falling edge at: 103147
+Falling edge at: 105723
+Rising edge at: 108188
+Falling edge at: 110872
+Falling edge at: 113446
+Falling edge at: 116023
+Rising edge at: 118495
+Falling edge at: 121173
+Falling edge at: 123748
+Rising edge at: 126212
+Rising edge at: 128790
+Falling edge at: 131474
+Falling edge at: 134049
+Falling edge at: 136624
+Falling edge at: 139198
+Falling edge at: 141774
+Falling edge at: 144349
+Rising edge at: 146810
+Falling edge at: 149500
+Rising edge at: 151964
+Falling edge at: 154650
+Falling edge at: 157225
+Falling edge at: 159801
+Rising edge at: 162262
+Rising edge at: 164838
+Rising edge at: 167415
+Rising edge at: 169992
+Rising edge at: 172564
+Falling edge at: 175250
+Rising edge at: 177715
+Rising edge at: 180291
+Rising edge at: 182869
+Rising edge at: 185437
+Rising edge at: 188016
+Rising edge at: 190594
+Falling edge at: 193276
+Falling edge at: 195851
+Falling edge at: 198425
+Falling edge at: 201001
+Falling edge at: 203575
+Falling edge at: 206152
+Rising edge at: 208615
+Rising edge at: 211188
+Rising edge at: 213761
+Falling edge at: 216451
+Rising edge at: 218917
+Rising edge at: 221497
+Rising edge at: 224063
+Falling edge at: 226752
+Rising edge at: 229217
+file8_7_15.42898400.dat
+10101000100010011000000101000111110111111000000111011101
+Frame: 0xA8 0x21 0x08 0xC6 0x98 0x5E 0x5C 
+    Key: 0xA8
+    Control: 0x02
+    Checksum: ok
+    Address: 98 5E 5C 
+    Rolling Code: 08 C6 
+
+Thick pulse width: 8663
+Falling edge at: 70522, Pulse counter: 5096
+Falling edge at: 85220, Pulse counter: 9756
+Rising edge at: 87676
+Falling edge at: 90361
+Rising edge at: 92822
+Falling edge at: 95511
+Rising edge at: 97973
+Falling edge at: 100661
+Falling edge at: 103236
+Rising edge at: 105704
+Rising edge at: 108273
+Falling edge at: 110962
+Falling edge at: 113537
+Falling edge at: 116112
+Rising edge at: 118581
+Falling edge at: 121263
+Falling edge at: 123838
+Falling edge at: 126413
+Rising edge at: 128877
+Falling edge at: 131564
+Falling edge at: 134139
+Falling edge at: 136714
+Falling edge at: 139290
+Falling edge at: 141865
+Falling edge at: 144440
+Falling edge at: 147014
+Falling edge at: 149591
+Rising edge at: 152058
+Falling edge at: 154741
+Falling edge at: 157315
+Falling edge at: 159891
+Rising edge at: 162370
+Rising edge at: 164933
+Rising edge at: 167505
+Rising edge at: 170084
+Rising edge at: 172658
+Falling edge at: 175344
+Rising edge at: 177807
+Rising edge at: 180395
+Rising edge at: 182960
+Rising edge at: 185535
+Rising edge at: 188107
+Rising edge at: 190680
+Falling edge at: 193369
+Falling edge at: 195946
+Falling edge at: 198520
+Falling edge at: 201095
+Falling edge at: 203670
+Falling edge at: 206246
+Rising edge at: 208706
+Rising edge at: 211294
+Rising edge at: 213859
+Falling edge at: 216547
+Rising edge at: 219009
+Rising edge at: 221589
+Rising edge at: 224159
+Falling edge at: 226846
+Rising edge at: 229313
+file8_8_16.50091200.dat
+10101001100010001000000001000111110111111000000111011101
+Frame: 0xA9 0x21 0x08 0xC7 0x98 0x5E 0x5C 
+    Key: 0xA9
+    Control: 0x02
+    Checksum: ok
+    Address: 98 5E 5C 
+    Rolling Code: 08 C7 
+
+Thick pulse width: 8654
+Falling edge at: 70060, Pulse counter: 5095
+Falling edge at: 84759, Pulse counter: 9755
+Rising edge at: 87216
+Falling edge at: 89900
+Rising edge at: 92363
+Falling edge at: 95051
+Rising edge at: 97519
+Falling edge at: 100200
+Rising edge at: 102669
+Falling edge at: 105352
+Rising edge at: 107817
+Falling edge at: 110502
+Falling edge at: 113077
+Falling edge at: 115652
+Falling edge at: 118228
+Rising edge at: 120696
+Rising edge at: 123267
+Rising edge at: 125838
+Rising edge at: 128415
+Falling edge at: 131104
+Falling edge at: 133678
+Falling edge at: 136253
+Rising edge at: 138720
+Rising edge at: 141293
+Rising edge at: 143866
+Rising edge at: 146440
+Falling edge at: 149128
+Rising edge at: 151596
+Falling edge at: 154280
+Falling edge at: 156854
+Falling edge at: 159429
+Rising edge at: 161894
+Rising edge at: 164472
+Rising edge at: 167045
+Rising edge at: 169619
+Rising edge at: 172193
+Falling edge at: 174881
+Rising edge at: 177348
+Rising edge at: 179920
+Rising edge at: 182502
+Rising edge at: 185069
+Rising edge at: 187648
+Rising edge at: 190219
+Falling edge at: 192907
+Falling edge at: 195482
+Falling edge at: 198057
+Falling edge at: 200631
+Falling edge at: 203208
+Falling edge at: 205783
+Rising edge at: 208256
+Rising edge at: 210823
+Rising edge at: 213395
+Falling edge at: 216083
+Rising edge at: 218549
+Rising edge at: 221122
+Rising edge at: 223695
+Falling edge at: 226384
+Rising edge at: 228847
+file8_9_17.77154400.dat
+10101010100001111000111101000111110111111000000111011101
+Frame: 0xAA 0x2D 0x08 0xC8 0x98 0x5E 0x5C 
+    Key: 0xAA
+    Control: 0x02
+    Checksum: ok
+    Address: 98 5E 5C 
+    Rolling Code: 08 C8 
+
+Thick pulse width: 8663
+Falling edge at: 70027, Pulse counter: 5091
+Falling edge at: 84726, Pulse counter: 9756
+Rising edge at: 87184
+Falling edge at: 89869
+Rising edge at: 92332
+Falling edge at: 95019
+Falling edge at: 97594
+Rising edge at: 100065
+Rising edge at: 102642
+Falling edge at: 105320
+Rising edge at: 107785
+Falling edge at: 110471
+Falling edge at: 113046
+Falling edge at: 115621
+Rising edge at: 118090
+Falling edge at: 120771
+Rising edge at: 123235
+Rising edge at: 125808
+Rising edge at: 128385
+Falling edge at: 131072
+Falling edge at: 133648
+Falling edge at: 136222
+Falling edge at: 138798
+Falling edge at: 141372
+Rising edge at: 143851
+Rising edge at: 146413
+Falling edge at: 149098
+Rising edge at: 151568
+Falling edge at: 154249
+Falling edge at: 156825
+Falling edge at: 159399
+Rising edge at: 161874
+Rising edge at: 164441
+Rising edge at: 167016
+Rising edge at: 169588
+Rising edge at: 172166
+Falling edge at: 174850
+Rising edge at: 177314
+Rising edge at: 179891
+Rising edge at: 182465
+Rising edge at: 185047
+Rising edge at: 187612
+Rising edge at: 190193
+Falling edge at: 192877
+Falling edge at: 195451
+Falling edge at: 198027
+Falling edge at: 200602
+Falling edge at: 203178
+Falling edge at: 205753
+Rising edge at: 208215
+Rising edge at: 210798
+Rising edge at: 213364
+Falling edge at: 216053
+Rising edge at: 218519
+Rising edge at: 221090
+Rising edge at: 223667
+Falling edge at: 226354
+Rising edge at: 228822
+file8_5_11.71571200.dat
+10100110100010111000001101000111110111111000000111011101
+Frame: 0xA6 0x2D 0x08 0xC4 0x98 0x5E 0x5C 
+    Key: 0xA6
+    Control: 0x02
+    Checksum: ok
+    Address: 98 5E 5C 
+    Rolling Code: 08 C4 
+
+Thick pulse width: 8666
+Falling edge at: 70402, Pulse counter: 5095
+Falling edge at: 85102, Pulse counter: 9751
+Rising edge at: 87552
+Falling edge at: 90244
+Rising edge at: 92717
+Falling edge at: 95393
+Falling edge at: 97969
+Rising edge at: 100432
+Rising edge at: 103008
+Rising edge at: 105583
+Rising edge at: 108162
+Falling edge at: 110845
+Falling edge at: 113420
+Falling edge at: 115996
+Rising edge at: 118461
+Falling edge at: 121147
+Rising edge at: 123610
+Falling edge at: 126297
+Rising edge at: 128761
+Falling edge at: 131447
+Falling edge at: 134023
+Falling edge at: 136598
+Falling edge at: 139172
+Falling edge at: 141747
+Rising edge at: 144210
+Falling edge at: 146899
+Falling edge at: 149474
+Rising edge at: 151938
+Falling edge at: 154624
+Falling edge at: 157200
+Falling edge at: 159776
+Rising edge at: 162236
+Rising edge at: 164816
+Rising edge at: 167390
+Rising edge at: 169962
+Rising edge at: 172539
+Falling edge at: 175227
+Rising edge at: 177695
+Rising edge at: 180262
+Rising edge at: 182841
+Rising edge at: 185413
+Rising edge at: 187999
+Rising edge at: 190564
+Falling edge at: 193253
+Falling edge at: 195828
+Falling edge at: 198404
+Falling edge at: 200979
+Falling edge at: 203554
+Falling edge at: 206129
+Rising edge at: 208593
+Rising edge at: 211171
+Rising edge at: 213741
+Falling edge at: 216430
+Rising edge at: 218900
+Rising edge at: 221472
+Rising edge at: 224041
+Falling edge at: 226731
+Rising edge at: 229196
+file8_6_14.13337600.dat
+10100111100010101000001001000111110111111000000111011101
+Frame: 0xA7 0x2D 0x08 0xC5 0x98 0x5E 0x5C 
+    Key: 0xA7
+    Control: 0x02
+    Checksum: ok
+    Address: 98 5E 5C 
+    Rolling Code: 08 C5 
+
+Thick pulse width: 8664
+Falling edge at: 70432, Pulse counter: 5095
+Falling edge at: 85129, Pulse counter: 9752
+Rising edge at: 87586
+Falling edge at: 90272
+Rising edge at: 92740
+Falling edge at: 95422
+Rising edge at: 97903
+Falling edge at: 100572
+Falling edge at: 103147
+Falling edge at: 105723
+Rising edge at: 108188
+Falling edge at: 110872
+Falling edge at: 113446
+Falling edge at: 116023
+Rising edge at: 118495
+Falling edge at: 121173
+Falling edge at: 123748
+Rising edge at: 126212
+Rising edge at: 128790
+Falling edge at: 131474
+Falling edge at: 134049
+Falling edge at: 136624
+Falling edge at: 139198
+Falling edge at: 141774
+Falling edge at: 144349
+Rising edge at: 146810
+Falling edge at: 149500
+Rising edge at: 151964
+Falling edge at: 154650
+Falling edge at: 157225
+Falling edge at: 159801
+Rising edge at: 162262
+Rising edge at: 164838
+Rising edge at: 167415
+Rising edge at: 169992
+Rising edge at: 172564
+Falling edge at: 175250
+Rising edge at: 177715
+Rising edge at: 180291
+Rising edge at: 182869
+Rising edge at: 185437
+Rising edge at: 188016
+Rising edge at: 190594
+Falling edge at: 193276
+Falling edge at: 195851
+Falling edge at: 198425
+Falling edge at: 201001
+Falling edge at: 203575
+Falling edge at: 206152
+Rising edge at: 208615
+Rising edge at: 211188
+Rising edge at: 213761
+Falling edge at: 216451
+Rising edge at: 218917
+Rising edge at: 221497
+Rising edge at: 224063
+Falling edge at: 226752
+Rising edge at: 229217
+file8_7_15.42898400.dat
+10101000100010011000000101000111110111111000000111011101
+Frame: 0xA8 0x21 0x08 0xC6 0x98 0x5E 0x5C 
+    Key: 0xA8
+    Control: 0x02
+    Checksum: ok
+    Address: 98 5E 5C 
+    Rolling Code: 08 C6 
+
+Thick pulse width: 8663
+Falling edge at: 70522, Pulse counter: 5096
+Falling edge at: 85220, Pulse counter: 9756
+Rising edge at: 87676
+Falling edge at: 90361
+Rising edge at: 92822
+Falling edge at: 95511
+Rising edge at: 97973
+Falling edge at: 100661
+Falling edge at: 103236
+Rising edge at: 105704
+Rising edge at: 108273
+Falling edge at: 110962
+Falling edge at: 113537
+Falling edge at: 116112
+Rising edge at: 118581
+Falling edge at: 121263
+Falling edge at: 123838
+Falling edge at: 126413
+Rising edge at: 128877
+Falling edge at: 131564
+Falling edge at: 134139
+Falling edge at: 136714
+Falling edge at: 139290
+Falling edge at: 141865
+Falling edge at: 144440
+Falling edge at: 147014
+Falling edge at: 149591
+Rising edge at: 152058
+Falling edge at: 154741
+Falling edge at: 157315
+Falling edge at: 159891
+Rising edge at: 162370
+Rising edge at: 164933
+Rising edge at: 167505
+Rising edge at: 170084
+Rising edge at: 172658
+Falling edge at: 175344
+Rising edge at: 177807
+Rising edge at: 180395
+Rising edge at: 182960
+Rising edge at: 185535
+Rising edge at: 188107
+Rising edge at: 190680
+Falling edge at: 193369
+Falling edge at: 195946
+Falling edge at: 198520
+Falling edge at: 201095
+Falling edge at: 203670
+Falling edge at: 206246
+Rising edge at: 208706
+Rising edge at: 211294
+Rising edge at: 213859
+Falling edge at: 216547
+Rising edge at: 219009
+Rising edge at: 221589
+Rising edge at: 224159
+Falling edge at: 226846
+Rising edge at: 229313
+file8_8_16.50091200.dat
+10101001100010001000000001000111110111111000000111011101
+Frame: 0xA9 0x21 0x08 0xC7 0x98 0x5E 0x5C 
+    Key: 0xA9
+    Control: 0x02
+    Checksum: ok
+    Address: 98 5E 5C 
+    Rolling Code: 08 C7 
+
+Thick pulse width: 8654
+Falling edge at: 70060, Pulse counter: 5095
+Falling edge at: 84759, Pulse counter: 9755
+Rising edge at: 87216
+Falling edge at: 89900
+Rising edge at: 92363
+Falling edge at: 95051
+Rising edge at: 97519
+Falling edge at: 100200
+Rising edge at: 102669
+Falling edge at: 105352
+Rising edge at: 107817
+Falling edge at: 110502
+Falling edge at: 113077
+Falling edge at: 115652
+Falling edge at: 118228
+Rising edge at: 120696
+Rising edge at: 123267
+Rising edge at: 125838
+Rising edge at: 128415
+Falling edge at: 131104
+Falling edge at: 133678
+Falling edge at: 136253
+Rising edge at: 138720
+Rising edge at: 141293
+Rising edge at: 143866
+Rising edge at: 146440
+Falling edge at: 149128
+Rising edge at: 151596
+Falling edge at: 154280
+Falling edge at: 156854
+Falling edge at: 159429
+Rising edge at: 161894
+Rising edge at: 164472
+Rising edge at: 167045
+Rising edge at: 169619
+Rising edge at: 172193
+Falling edge at: 174881
+Rising edge at: 177348
+Rising edge at: 179920
+Rising edge at: 182502
+Rising edge at: 185069
+Rising edge at: 187648
+Rising edge at: 190219
+Falling edge at: 192907
+Falling edge at: 195482
+Falling edge at: 198057
+Falling edge at: 200631
+Falling edge at: 203208
+Falling edge at: 205783
+Rising edge at: 208256
+Rising edge at: 210823
+Rising edge at: 213395
+Falling edge at: 216083
+Rising edge at: 218549
+Rising edge at: 221122
+Rising edge at: 223695
+Falling edge at: 226384
+Rising edge at: 228847
+file8_9_17.77154400.dat
+10101010100001111000111101000111110111111000000111011101
+Frame: 0xAA 0x2D 0x08 0xC8 0x98 0x5E 0x5C 
+    Key: 0xAA
+    Control: 0x02
+    Checksum: ok
+    Address: 98 5E 5C 
+    Rolling Code: 08 C8 
+
