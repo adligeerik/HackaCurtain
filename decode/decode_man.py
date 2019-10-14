@@ -8,7 +8,7 @@ window = 0
 file_name = sys.argv[1]
 
 if len(sys.argv) > 2:
-    verbose = sys.argv[2]
+    verbose = int(sys.argv[2])
 else:
     verbose = 0
 
@@ -85,6 +85,9 @@ while True:
     old_value = data[i]
     i += 1
     if i >= len(data):
+        break
+    elif (dd_counter>55):
+        print("dd_counter>55, Dataset too long")
         break
 
 ans = "".join([ str (int(x)) for x in decoded_data ])
